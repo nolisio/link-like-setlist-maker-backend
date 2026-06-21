@@ -1,0 +1,87 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
+import { prisma } from "../src/db/client.js";
+
+type UnitSeed = {
+  id: string;
+  name: string;
+  sortOrder: number;
+};
+
+type SongSeed = {
+  id: string;
+  title: string;
+  titleJa?: string;
+  unitId: string;
+  sortOrder: number;
+  releaseDate?: string;
+  deezerSearchTitle?: string;
+  deezerArtistName?: string;
+  deezerArtistId?: number;
+  deezerTrackId?: number;
+};
+
+const deezerArtistDefaults: Record<string, { name: string; id?: number }> = {
+  hasunosora: { name: "蓮ノ空女学院スクールアイドルクラブ", id: 205924787 },
+  "cerise-bouquet": { name: "スリーズブーケ", id: 205924797 },
+  dollchestra: { name: "DOLLCHESTRA", id: 205924807 },
+  "mira-cra-park": { name: "みらくらぱーく！", id: 205924817 },
+  "edel-note": { name: "Edel Note" }
+};
+
+async function readSeedJson<T>(fileName: string): Promise<T> {
+  const filePath = join(process.cwd(), "prisma", "seed-data", fileName);
+  return JSON.parse(await readFile(filePath, "utf8")) as T;
+}
+
+export async function seedCatalog() {
+  const [units, songs] = await Promise.all([
+    readSeedJson<UnitSeed[]>("units.json"),
+    readSeedJson<SongSeed[]>("songs.json")
+  ]);
+
+  await prisma.$transaction(async (tx) => {
+    for (const unit of units) {
+      await tx.unit.upsert({
+        where: { id: unit.id },
+        update: unit,
+        create: unit
+      });
+    }
+
+    for (const song of songs) {
+      const deezerArtist = deezerArtistDefaults[song.unitId];
+      const songData = {
+        id: song.id,
+        title: song.title,
+        titleJa: song.titleJa ?? song.title,
+        unitId: song.unitId,
+        sortOrder: song.sortOrder,
+        releaseDate: song.releaseDate ? new Date(song.releaseDate) : null,
+        deezerSearchTitle: song.deezerSearchTitle ?? null,
+        deezerArtistName: song.deezerArtistName ?? deezerArtist?.name ?? null,
+        deezerArtistId: song.deezerArtistId ?? deezerArtist?.id ?? null,
+        deezerTrackId: song.deezerTrackId === undefined ? null : BigInt(song.deezerTrackId)
+      };
+
+      await tx.song.upsert({
+        where: { id: song.id },
+        update: songData,
+        create: songData
+      });
+    }
+  });
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  seedCatalog()
+    .then(async () => {
+      await prisma.$disconnect();
+    })
+    .catch(async (error: unknown) => {
+      console.error(error);
+      await prisma.$disconnect();
+      process.exit(1);
+    });
+}

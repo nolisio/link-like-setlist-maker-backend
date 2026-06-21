@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hasunosora",
+    "name": "Hasunosora Girls' High School Idol Club",
+    "sortOrder": 1
+  },
+  {
+    "id": "cerise-bouquet",
+    "name": "Cerise Bouquet",
+    "sortOrder": 2
+  },
+  {
+    "id": "dollchestra",
+    "name": "DOLLCHESTRA",
+    "sortOrder": 3
+  },
+  {
+    "id": "mira-cra-park",
+    "name": "Mira-Cra Park!",
+    "sortOrder": 4
+  },
+  {
+    "id": "edel-note",
+    "name": "Edel Note",
+    "sortOrder": 5
+  },
+  {
+    "id": "rurino-to-yukai-na-tsuzuri-tachi",
+    "name": "Rurino to Yukai na Tsuzuri-tachi",
+    "sortOrder": 6
+  },
+  {
+    "id": "kahomegu-gelato",
+    "name": "KahoMegu Gelato",
+    "sortOrder": 7
+  },
+  {
+    "id": "hasu-no-kyuujitsu",
+    "name": "Hasu no Kyuujitsu",
+    "sortOrder": 8
+  },
+  {
+    "id": "ruri-and-to",
+    "name": "Ruri&To",
+    "sortOrder": 9
+  },
+  {
+    "id": "prince-epsilon",
+    "name": "PRINCE epsilon",
+    "sortOrder": 10
+  },
+  {
+    "id": "solo",
+    "name": "Solo",
+    "sortOrder": 11
+  },
+  {
+    "id": "collaboration",
+    "name": "Collaboration",
+    "sortOrder": 12
+  }
+]

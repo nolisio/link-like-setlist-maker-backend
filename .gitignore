@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+*.db
+*.db-journal
+supabase/.temp
+supabase/.branches
+docs/superpowers

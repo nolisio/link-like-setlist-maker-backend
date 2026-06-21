@@ -1,0 +1,39 @@
+{
+  "name": "link-like-setlist-maker-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/src/index.js",
+    "build": "rm -rf dist && tsc",
+    "typecheck": "prisma generate && tsc --noEmit",
+    "test": "prisma generate && DATABASE_URL=\"${DATABASE_URL:-postgresql://postgres:postgres@127.0.0.1:54322/postgres}\" DIRECT_URL=\"${DIRECT_URL:-${DATABASE_URL:-postgresql://postgres:postgres@127.0.0.1:54322/postgres}}\" prisma migrate reset --force --skip-generate && vitest run",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:seed": "tsx prisma/seed.ts",
+    "previews:backfill": "tsx scripts/backfill-song-previews.ts",
+    "supabase:start": "npx supabase start",
+    "supabase:stop": "npx supabase stop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Backend API for the Link Like setlist maker.",
+  "dependencies": {
+    "@hono/node-server": "^2.0.5",
+    "@hono/swagger-ui": "^0.6.1",
+    "@hono/zod-openapi": "^1.4.0",
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "hono": "^4.12.26",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}

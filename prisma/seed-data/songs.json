@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "dream-believers",
+    "title": "Dream Believers",
+    "titleJa": "Dream Believers",
+    "unitId": "hasunosora",
+    "sortOrder": 1,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "Dream Believers",
+    "deezerTrackId": 2967993121
+  },
+  {
+    "id": "on-your-mark",
+    "title": "On your mark",
+    "titleJa": "On your mark",
+    "unitId": "dollchestra",
+    "sortOrder": 2,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "On your mark"
+  },
+  {
+    "id": "suisai-sekai",
+    "title": "Suisai Sekai",
+    "titleJa": "水彩世界",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 3,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "Suisai Sekai"
+  },
+  {
+    "id": "awoke",
+    "title": "AWOKE",
+    "unitId": "dollchestra",
+    "sortOrder": 4,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "AWOKE",
+    "titleJa": "AWOKE"
+  },
+  {
+    "id": "do-do-do",
+    "title": "ド! ド! ド!",
+    "unitId": "mira-cra-park",
+    "sortOrder": 5,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "ド! ド! ド!",
+    "titleJa": "ド! ド! ド!"
+  },
+  {
+    "id": "eien-no-euphoria",
+    "title": "永遠のEuphoria",
+    "titleJa": "永遠のEuphoria",
+    "unitId": "hasunosora",
+    "sortOrder": 6,
+    "releaseDate": "2023-03-29",
+    "deezerSearchTitle": "永遠のEuphoria",
+    "deezerTrackId": 2967993171
+  },
+  {
+    "id": "reflection-in-the-mirror",
+    "title": "Reflection in the mirror",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 7,
+    "releaseDate": "2023-04-26",
+    "titleJa": "Reflection in the mirror"
+  },
+  {
+    "id": "fortune-movie",
+    "title": "フォーチューンムービー",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 8,
+    "releaseDate": "2023-04-26",
+    "titleJa": "フォーチュンムービー"
+  },
+  {
+    "id": "mix-shake",
+    "title": "Mix shake!!",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 9,
+    "releaseDate": "2023-04-26",
+    "deezerSearchTitle": "Mix Shake",
+    "titleJa": "Mix shake!!"
+  },
+  {
+    "id": "sparkly-spot",
+    "title": "Sparkly Spot",
+    "unitId": "dollchestra",
+    "sortOrder": 10,
+    "releaseDate": "2023-04-26",
+    "titleJa": "Sparkly Spot"
+  },
+  {
+    "id": "tsukimakase",
+    "title": "Tsukimakase",
+    "titleJa": "ツキマカセ",
+    "unitId": "dollchestra",
+    "sortOrder": 11,
+    "releaseDate": "2023-04-26"
+  },
+  {
+    "id": "kibouteki-prism",
+    "title": "Kibouteki Prism",
+    "titleJa": "希望的プリズム",
+    "unitId": "dollchestra",
+    "sortOrder": 12,
+    "releaseDate": "2023-04-26"
+  },
+  {
+    "id": "oka-ranman",
+    "title": "Oka Ranman",
+    "titleJa": "謳歌爛漫",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 13,
+    "releaseDate": "2023-06-14"
+  },
+  {
+    "id": "scapegoat",
+    "title": "Scapegoat",
+    "unitId": "dollchestra",
+    "sortOrder": 14,
+    "releaseDate": "2023-06-14",
+    "titleJa": "スケイプゴート"
+  },
+  {
+    "id": "holiday-holiday",
+    "title": "Holiday∞Holiday",
+    "titleJa": "Holiday∞Holiday",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 15,
+    "releaseDate": "2023-06-14",
+    "deezerSearchTitle": "Holiday∞Holiday"
+  },
+  {
+    "id": "tragic-drops",
+    "title": "Tragic Drops",
+    "unitId": "dollchestra",
+    "sortOrder": 16,
+    "releaseDate": "2023-06-14",
+    "titleJa": "Tragic Drops"
+  },
+  {
+    "id": "deepness",
+    "title": "DEEPNESS",
+    "unitId": "hasunosora",
+    "sortOrder": 17,
+    "releaseDate": "2023-08-09",
+    "titleJa": "DEEPNESS"
+  },
+  {
+    "id": "kawaii-no-susume",
+    "title": "Kawaii no susume",
+    "titleJa": "Kawaii no susume",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 18,
+    "releaseDate": "2023-08-09"
+  },
+  {
+    "id": "genyou-yakou",
+    "title": "Genyou Yakou",
+    "titleJa": "眩耀夜行",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 19,
+    "releaseDate": "2023-08-09"
+  },
+  {
+    "id": "jibun-diary",
+    "title": "Jibun Diary",
+    "titleJa": "ジブンダイアリー",
+    "unitId": "dollchestra",
+    "sortOrder": 20,
+    "releaseDate": "2023-08-09"
+  },
+  {
+    "id": "mirage-voyage",
+    "title": "Mirage Voyage",
+    "unitId": "dollchestra",
+    "sortOrder": 21,
+    "releaseDate": "2023-08-09",
+    "titleJa": "Mirage Voyage"
+  },
+  {
+    "id": "natsumeki-pain",
+    "title": "Natsumeki Pain",
+    "titleJa": "夏めきペイン",
+    "unitId": "hasunosora",
+    "sortOrder": 22,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "yup-yup-yup",
+    "title": "Yup! Yup! Yup!",
+    "unitId": "hasunosora",
+    "sortOrder": 23,
+    "releaseDate": "2023-09-20",
+    "titleJa": "Yup! Yup! Yup!"
+  },
+  {
+    "id": "kokon-tozai",
+    "title": "Kokon Tozai",
+    "titleJa": "ココン東西",
+    "unitId": "mira-cra-park",
+    "sortOrder": 24,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "zanyou",
+    "title": "Zanyou",
+    "titleJa": "残陽",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 25,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "seishun-no-rinkaku",
+    "title": "Seishun no Rinkaku",
+    "titleJa": "青春の輪郭",
+    "unitId": "dollchestra",
+    "sortOrder": 26,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "hakuchuu-a-la-mode",
+    "title": "Hakuchuu à la Mode",
+    "titleJa": "ハクチューアラモード",
+    "unitId": "mira-cra-park",
+    "sortOrder": 27,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "dear-my-future",
+    "title": "Dear my future",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 28,
+    "releaseDate": "2023-09-20",
+    "titleJa": "Dear my future"
+  },
+  {
+    "id": "parallel-dancer",
+    "title": "Parallel Dancer",
+    "unitId": "dollchestra",
+    "sortOrder": 29,
+    "releaseDate": "2023-09-20",
+    "titleJa": "パラレルダンサー"
+  },
+  {
+    "id": "asu-no-sora-no-bokutachi-e",
+    "title": "Asu no Sora no Bokutachi e",
+    "titleJa": "明日の空の僕たちへ",
+    "unitId": "hasunosora",
+    "sortOrder": 30,
+    "releaseDate": "2023-09-20"
+  },
+  {
+    "id": "legato",
+    "title": "Legato",
+    "unitId": "hasunosora",
+    "sortOrder": 31,
+    "releaseDate": "2023-09-20",
+    "titleJa": "Legato"
+  },
+  {
+    "id": "sugao-no-pixel",
+    "title": "Sugao no Pixel",
+    "titleJa": "素顔のピクセル",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 32,
+    "releaseDate": "2023-11-15"
+  },
+  {
+    "id": "sugar-melt",
+    "title": "Sugar Melt",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 33,
+    "releaseDate": "2023-11-15",
+    "titleJa": "シュガーメルト"
+  },
+  {
+    "id": "senpen-banka",
+    "title": "Senpen Banka",
+    "titleJa": "千変万華",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 34,
+    "releaseDate": "2023-11-15"
+  },
+  {
+    "id": "take-it-over",
+    "title": "Take It Over",
+    "unitId": "dollchestra",
+    "sortOrder": 35,
+    "releaseDate": "2023-11-22",
+    "titleJa": "Take It Over"
+  },
+  {
+    "id": "ameiro",
+    "title": "Ameiro",
+    "titleJa": "飴色",
+    "unitId": "dollchestra",
+    "sortOrder": 36,
+    "releaseDate": "2023-11-22"
+  },
+  {
+    "id": "knot",
+    "title": "KNOT",
+    "unitId": "dollchestra",
+    "sortOrder": 37,
+    "releaseDate": "2023-11-22",
+    "titleJa": "KNOT"
+  },
+  {
+    "id": "identity",
+    "title": "Identity",
+    "titleJa": "アイデンティティ",
+    "unitId": "mira-cra-park",
+    "sortOrder": 38,
+    "releaseDate": "2023-11-29"
+  },
+  {
+    "id": "tensai-nano-kamo-shirenai",
+    "title": "Tensai Nano Kamo Shirenai",
+    "titleJa": "天才なのかもしれない",
+    "unitId": "mira-cra-park",
+    "sortOrder": 39,
+    "releaseDate": "2023-11-29"
+  },
+  {
+    "id": "nonfiction-hero-show",
+    "title": "Nonfiction Hero Show",
+    "unitId": "mira-cra-park",
+    "sortOrder": 40,
+    "releaseDate": "2023-11-29",
+    "titleJa": "ノンフィクションヒーローショー"
+  },
+  {
+    "id": "ijigen-bigbang",
+    "title": "Ijigen BIGBANG",
+    "titleJa": "異次元★BIGBANG",
+    "unitId": "collaboration",
+    "sortOrder": 41,
+    "releaseDate": "2023-12-06",
+    "deezerArtistName": "Kaho Hinoshita"
+  },
+  {
+    "id": "trick-and-cute",
+    "title": "Trick & Cute",
+    "unitId": "hasunosora",
+    "sortOrder": 42,
+    "releaseDate": "2024-01-17",
+    "titleJa": "Trick & Cute"
+  },
+  {
+    "id": "tsubasa-la-liberte",
+    "title": "Tsubasa La Liberté",
+    "titleJa": "ツバサ・ラ・リベルテ",
+    "unitId": "hasunosora",
+    "sortOrder": 43,
+    "releaseDate": "2024-01-17",
+    "deezerSearchTitle": "Tsubasa La Liberte"
+  },
+  {
+    "id": "link-to-the-future",
+    "title": "Link to the FUTURE",
+    "unitId": "hasunosora",
+    "sortOrder": 44,
+    "releaseDate": "2024-01-17",
+    "titleJa": "Link to the FUTURE"
+  },
+  {
+    "id": "special-thanks",
+    "title": "Special Thanks",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 45,
+    "releaseDate": "2024-02-14",
+    "titleJa": "Special Thanks"
+  },
+  {
+    "id": "ao-to-shabon",
+    "title": "Ao to Shabon",
+    "titleJa": "青とシャボン",
+    "unitId": "dollchestra",
+    "sortOrder": 46,
+    "releaseDate": "2024-02-14"
+  },
+  {
+    "id": "milk",
+    "title": "Milk",
+    "titleJa": "ミルク",
+    "unitId": "mira-cra-park",
+    "sortOrder": 47,
+    "releaseDate": "2024-02-14"
+  },
+  {
+    "id": "colorfulness",
+    "title": "Colorfulness",
+    "unitId": "rurino-to-yukai-na-tsuzuri-tachi",
+    "sortOrder": 48,
+    "releaseDate": "2024-03-20",
+    "titleJa": "Colorfulness"
+  },
+  {
+    "id": "happy-shijou-shugi",
+    "title": "Happy Shijou Shugi!",
+    "titleJa": "ハッピー至上主義！",
+    "unitId": "kahomegu-gelato",
+    "sortOrder": 49,
+    "releaseDate": "2024-03-20"
+  },
+  {
+    "id": "pleasure-feather",
+    "title": "Pleasure Feather",
+    "unitId": "hasu-no-kyuujitsu",
+    "sortOrder": 50,
+    "releaseDate": "2024-03-20",
+    "titleJa": "Pleasure Feather"
+  },
+  {
+    "id": "ishin-denshin",
+    "title": "Ishin☆Denshin",
+    "titleJa": "以心☆電信",
+    "unitId": "mira-cra-park",
+    "sortOrder": 51,
+    "releaseDate": "2024-03-27"
+  },
+  {
+    "id": "bang-you-gravity",
+    "title": "BANG YOU Gravity",
+    "unitId": "mira-cra-park",
+    "sortOrder": 52,
+    "releaseDate": "2024-03-27",
+    "titleJa": "BANG YOU グラビティ"
+  },
+  {
+    "id": "mahara-jamboree",
+    "title": "Mahara Jamboree",
+    "unitId": "mira-cra-park",
+    "sortOrder": 53,
+    "releaseDate": "2024-03-27",
+    "titleJa": "マハラジャンボリー"
+  },
+  {
+    "id": "dakishimeru-hanabira",
+    "title": "Dakishimeru Hanabira",
+    "titleJa": "抱きしめる花びら",
+    "unitId": "hasunosora",
+    "sortOrder": 54,
+    "releaseDate": "2024-04-03"
+  },
+  {
+    "id": "step-up",
+    "title": "STEP UP!",
+    "unitId": "hasunosora",
+    "sortOrder": 55,
+    "releaseDate": "2024-04-03",
+    "titleJa": "STEP UP!"
+  },
+  {
+    "id": "dream-believers-104",
+    "title": "Dream Believers (104th Ver.)",
+    "unitId": "hasunosora",
+    "sortOrder": 56,
+    "releaseDate": "2024-04-17",
+    "deezerSearchTitle": "Dream Believers 104th Ver.",
+    "titleJa": "Dream Believers (104th Ver.)"
+  },
+  {
+    "id": "on-your-mark-104",
+    "title": "On your mark (104th Ver.)",
+    "unitId": "dollchestra",
+    "sortOrder": 57,
+    "releaseDate": "2024-04-17",
+    "deezerSearchTitle": "On your mark 104th Ver.",
+    "titleJa": "On your mark (104th Ver.)"
+  },
+  {
+    "id": "aoku-haruka",
+    "title": "Aoku Haruka",
+    "titleJa": "アオクハルカ",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 58,
+    "releaseDate": "2024-04-17"
+  },
+  {
+    "id": "ladybug",
+    "title": "Ladybug",
+    "unitId": "dollchestra",
+    "sortOrder": 59,
+    "releaseDate": "2024-04-17",
+    "titleJa": "レディバグ"
+  },
+  {
+    "id": "mira-creation",
+    "title": "Mira-Creation",
+    "unitId": "mira-cra-park",
+    "sortOrder": 60,
+    "releaseDate": "2024-04-17",
+    "titleJa": "みらくりえーしょん"
+  },
+  {
+    "id": "eien-no-euphoria-104",
+    "title": "永遠のEuphoria (104th Ver.)",
+    "titleJa": "永遠のEuphoria (104th Ver.)",
+    "unitId": "hasunosora",
+    "sortOrder": 61,
+    "releaseDate": "2024-04-17",
+    "deezerSearchTitle": "永遠のEuphoria 104th Ver."
+  },
+  {
+    "id": "bloom-the-smile-bloom-the-dream",
+    "title": "Bloom the smile, Bloom the dream!",
+    "unitId": "hasunosora",
+    "sortOrder": 62,
+    "releaseDate": "2024-07-17",
+    "titleJa": "Bloom the smile, Bloom the dream!"
+  },
+  {
+    "id": "365-days",
+    "title": "365 Days",
+    "unitId": "hasunosora",
+    "sortOrder": 63,
+    "releaseDate": "2024-07-17",
+    "titleJa": "365 Days"
+  },
+  {
+    "id": "tsukuyomi-kurage",
+    "title": "Tsukuyomi Kurage",
+    "titleJa": "月夜見海月",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 64,
+    "releaseDate": "2024-09-04"
+  },
+  {
+    "id": "reflection-in-the-mirror-104",
+    "title": "Reflection in the mirror (104th NEW Ver.)",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 65,
+    "releaseDate": "2024-09-04",
+    "titleJa": "Reflection in the mirror (104th NEW Ver.)"
+  },
+  {
+    "id": "proof",
+    "title": "Proof",
+    "unitId": "dollchestra",
+    "sortOrder": 66,
+    "releaseDate": "2024-09-11",
+    "titleJa": "Proof"
+  },
+  {
+    "id": "sparkly-spot-104",
+    "title": "Sparkly Spot (104th NEW Ver.)",
+    "unitId": "dollchestra",
+    "sortOrder": 67,
+    "releaseDate": "2024-09-11",
+    "titleJa": "Sparkly Spot (104th NEW Ver.)"
+  },
+  {
+    "id": "bring-the-love",
+    "title": "Bring the LOVE!",
+    "unitId": "collaboration",
+    "sortOrder": 68,
+    "releaseDate": "2024-09-20",
+    "deezerArtistName": "Kaho Hinoshita",
+    "titleJa": "Bring the LOVE!"
+  },
+  {
+    "id": "fanfare",
+    "title": "Fanfare!!!",
+    "unitId": "mira-cra-park",
+    "sortOrder": 69,
+    "releaseDate": "2024-10-02",
+    "titleJa": "Fanfare!!!"
+  },
+  {
+    "id": "identity-104",
+    "title": "Identity (104th NEW Ver.)",
+    "unitId": "mira-cra-park",
+    "sortOrder": 70,
+    "releaseDate": "2024-10-02",
+    "titleJa": "Identity (104th NEW Ver.)"
+  },
+  {
+    "id": "hanamusubi",
+    "title": "Hanamusubi",
+    "titleJa": "ハナムスビ",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 71,
+    "releaseDate": "2024-12-04"
+  },
+  {
+    "id": "birdcage",
+    "title": "Birdcage",
+    "titleJa": "バアドケージ",
+    "unitId": "dollchestra",
+    "sortOrder": 72,
+    "releaseDate": "2024-12-04"
+  },
+  {
+    "id": "joushou-kiryuu",
+    "title": "Joushou Kiryuu",
+    "titleJa": "ジョーショーキリュー",
+    "unitId": "mira-cra-park",
+    "sortOrder": 73,
+    "releaseDate": "2024-12-04"
+  },
+  {
+    "id": "key-of-like",
+    "title": "KEY of Like!",
+    "unitId": "hasunosora",
+    "sortOrder": 74,
+    "releaseDate": "2025-02-05",
+    "titleJa": "KEY of Like!"
+  },
+  {
+    "id": "now-or-never",
+    "title": "Now or Never",
+    "unitId": "hasunosora",
+    "sortOrder": 75,
+    "releaseDate": "2025-02-05",
+    "titleJa": "Now or Never"
+  },
+  {
+    "id": "aurora-flower",
+    "title": "AURORA FLOWER",
+    "unitId": "hasunosora",
+    "sortOrder": 76,
+    "releaseDate": "2025-02-26",
+    "titleJa": "AURORA FLOWER"
+  },
+  {
+    "id": "gekka-bijin",
+    "title": "Gekka Bijin",
+    "titleJa": "ゲッカビジン",
+    "unitId": "hasunosora",
+    "sortOrder": 77,
+    "releaseDate": "2025-02-26"
+  },
+  {
+    "id": "yume-wazurai",
+    "title": "Yume Wazurai",
+    "titleJa": "ユメワズライ",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 78,
+    "releaseDate": "2025-03-19"
+  },
+  {
+    "id": "chu-chocolate",
+    "title": "Chu! Chocolate",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 79,
+    "releaseDate": "2025-03-19",
+    "titleJa": "Chu! Chocolate"
+  },
+  {
+    "id": "compass",
+    "title": "COMPASS",
+    "unitId": "dollchestra",
+    "sortOrder": 80,
+    "releaseDate": "2025-03-19",
+    "titleJa": "COMPASS"
+  },
+  {
+    "id": "rem",
+    "title": "REM",
+    "unitId": "dollchestra",
+    "sortOrder": 81,
+    "releaseDate": "2025-03-19",
+    "titleJa": "レム"
+  },
+  {
+    "id": "zenhoui-kyun",
+    "title": "Zenhoui Kyun♡",
+    "titleJa": "全方位キュン♡",
+    "unitId": "mira-cra-park",
+    "sortOrder": 82,
+    "releaseDate": "2025-03-19"
+  },
+  {
+    "id": "kakurenbo-shiyou",
+    "title": "Kakurenbo Shiyou",
+    "titleJa": "かくれんぼしよう",
+    "unitId": "mira-cra-park",
+    "sortOrder": 83,
+    "releaseDate": "2025-03-19"
+  },
+  {
+    "id": "oideyo-ishikawa-daikanko",
+    "title": "Oideyo! Ishikawa Daikanko",
+    "titleJa": "おいでよ！石川大観光",
+    "unitId": "hasunosora",
+    "sortOrder": 84,
+    "releaseDate": "2025-03-26"
+  },
+  {
+    "id": "koigeshiki-showa-roman",
+    "title": "Koigeshiki Showa Roman",
+    "titleJa": "恋景色昭和ロマン",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 85,
+    "releaseDate": "2025-03-26"
+  },
+  {
+    "id": "vege-love-roux",
+    "title": "Vege Love Roux",
+    "titleJa": "ベジ・ラブ・ルー",
+    "unitId": "dollchestra",
+    "sortOrder": 86,
+    "releaseDate": "2025-03-26"
+  },
+  {
+    "id": "mahara-jamboree-ii",
+    "title": "Mahara Jamboree II",
+    "unitId": "mira-cra-park",
+    "sortOrder": 87,
+    "releaseDate": "2025-03-26",
+    "titleJa": "マハラジャンボリーⅡ"
+  },
+  {
+    "id": "haji-wa-jinsei-no-kakisute",
+    "title": "Haji wa Jinsei no Kakisute",
+    "titleJa": "恥は人生のかきすて",
+    "unitId": "hasunosora",
+    "sortOrder": 88,
+    "releaseDate": "2025-03-26"
+  },
+  {
+    "id": "love-it-wonderful-trip",
+    "title": "Love it! Wonderful Trip!",
+    "unitId": "hasunosora",
+    "sortOrder": 89,
+    "releaseDate": "2025-03-26",
+    "titleJa": "Love it! Wonderful Trip!"
+  },
+  {
+    "id": "asterism",
+    "title": "Asterism",
+    "unitId": "hasunosora",
+    "sortOrder": 90,
+    "releaseDate": "2025-03-26",
+    "titleJa": "アステリズム"
+  },
+  {
+    "id": "itsudemo-itsumademo",
+    "title": "Itsudemo, Itsumademo",
+    "titleJa": "いつでも、いつまでも",
+    "unitId": "hasunosora",
+    "sortOrder": 91,
+    "releaseDate": "2025-04-09"
+  },
+  {
+    "id": "ittan",
+    "title": "Ittan",
+    "titleJa": "いったん",
+    "unitId": "hasunosora",
+    "sortOrder": 92,
+    "releaseDate": "2025-04-09"
+  },
+  {
+    "id": "dream-believers-105",
+    "title": "Dream Believers (105th Ver.)",
+    "unitId": "hasunosora",
+    "sortOrder": 93,
+    "releaseDate": "2025-04-30",
+    "deezerSearchTitle": "Dream Believers 105th Ver.",
+    "titleJa": "Dream Believers (105th Ver.)"
+  },
+  {
+    "id": "celebration",
+    "title": "Celebration!",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 94,
+    "releaseDate": "2025-04-30",
+    "titleJa": "Celebration!"
+  },
+  {
+    "id": "ampere",
+    "title": "Ampere",
+    "unitId": "dollchestra",
+    "sortOrder": 95,
+    "releaseDate": "2025-04-30",
+    "titleJa": "アンペア"
+  },
+  {
+    "id": "wawo",
+    "title": "WAWO!",
+    "unitId": "mira-cra-park",
+    "sortOrder": 96,
+    "releaseDate": "2025-04-30",
+    "titleJa": "WAWO!"
+  },
+  {
+    "id": "edelied",
+    "title": "Edelied",
+    "unitId": "edel-note",
+    "sortOrder": 97,
+    "releaseDate": "2025-04-30",
+    "titleJa": "Edelied"
+  },
+  {
+    "id": "hello-new-dream",
+    "title": "Hello, new dream!",
+    "unitId": "hasunosora",
+    "sortOrder": 98,
+    "releaseDate": "2025-04-30",
+    "titleJa": "Hello, new dream!"
+  },
+  {
+    "id": "retrofuture",
+    "title": "Retrofuture",
+    "unitId": "edel-note",
+    "sortOrder": 99,
+    "releaseDate": "2025-05-21",
+    "titleJa": "Retrofuture"
+  },
+  {
+    "id": "tenchi-reimei",
+    "title": "Tenchi Reimei",
+    "titleJa": "天地黎明",
+    "unitId": "edel-note",
+    "sortOrder": 100,
+    "releaseDate": "2025-05-21"
+  },
+  {
+    "id": "chili-con-carne",
+    "title": "Chili Con Carne",
+    "unitId": "edel-note",
+    "sortOrder": 101,
+    "releaseDate": "2025-05-21",
+    "titleJa": "チリコンカン"
+  },
+  {
+    "id": "dream-believers-sakura",
+    "title": "Dream Believers (SAKURA Ver.)",
+    "unitId": "hasunosora",
+    "sortOrder": 102,
+    "releaseDate": "2025-06-04",
+    "deezerSearchTitle": "Dream Believers SAKURA Ver.",
+    "titleJa": "Dream Believers (SAKURA Ver.)"
+  },
+  {
+    "id": "be-proud",
+    "title": "be proud",
+    "unitId": "solo",
+    "sortOrder": 103,
+    "releaseDate": "2025-06-04",
+    "deezerArtistName": "Kozue Otomune",
+    "titleJa": "be proud"
+  },
+  {
+    "id": "shiawase-no-ribbon",
+    "title": "Shiawase no Ribbon",
+    "titleJa": "幸せのリボン",
+    "unitId": "solo",
+    "sortOrder": 104,
+    "releaseDate": "2025-06-04",
+    "deezerArtistName": "Tsuzuri Yugiri"
+  },
+  {
+    "id": "yappa-tenshi",
+    "title": "Yappa Tenshi!",
+    "titleJa": "やっぱ天使！",
+    "unitId": "solo",
+    "sortOrder": 105,
+    "releaseDate": "2025-06-04",
+    "deezerArtistName": "Megumi Fujishima"
+  },
+  {
+    "id": "i-do-me",
+    "title": "I Do Me!",
+    "titleJa": "アイドゥーミー！",
+    "unitId": "hasunosora",
+    "sortOrder": 106,
+    "releaseDate": "2025-07-09"
+  },
+  {
+    "id": "tohyo-star",
+    "title": "Tohyo☆Star!",
+    "titleJa": "投票☆スター！",
+    "unitId": "hasunosora",
+    "sortOrder": 107,
+    "releaseDate": "2025-07-09"
+  },
+  {
+    "id": "37-5-no-fantasy",
+    "title": "37.5℃ no Fantasy",
+    "titleJa": "37.5℃のファンタジー",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 108,
+    "releaseDate": "2025-07-02"
+  },
+  {
+    "id": "i-my-mayday",
+    "title": "I My Mayday",
+    "titleJa": "アイマイメーデー",
+    "unitId": "dollchestra",
+    "sortOrder": 109,
+    "releaseDate": "2025-07-02"
+  },
+  {
+    "id": "blast",
+    "title": "BLAST!!",
+    "unitId": "mira-cra-park",
+    "sortOrder": 110,
+    "releaseDate": "2025-07-02",
+    "titleJa": "BLAST!!"
+  },
+  {
+    "id": "izayoi-selene",
+    "title": "Izayoi Selene",
+    "titleJa": "十六夜セレーネ",
+    "unitId": "edel-note",
+    "sortOrder": 111,
+    "releaseDate": "2025-07-02"
+  },
+  {
+    "id": "fruit-punch",
+    "title": "Fruit Punch",
+    "titleJa": "フルーツパンチ",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 112,
+    "releaseDate": "2025-08-20"
+  },
+  {
+    "id": "my-lucky-clover",
+    "title": "My Lucky Clover",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 113,
+    "releaseDate": "2025-08-20",
+    "titleJa": "My Lucky Clover"
+  },
+  {
+    "id": "taiyou-de-are",
+    "title": "Taiyou de Are!",
+    "titleJa": "太陽であれ！",
+    "unitId": "dollchestra",
+    "sortOrder": 114,
+    "releaseDate": "2025-08-20"
+  },
+  {
+    "id": "diamondz",
+    "title": "diamondz",
+    "unitId": "dollchestra",
+    "sortOrder": 115,
+    "releaseDate": "2025-08-20",
+    "titleJa": "diamondz"
+  },
+  {
+    "id": "atarayo-hanabi",
+    "title": "Atarayo Hanabi",
+    "titleJa": "可惜夜花火",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 116,
+    "releaseDate": "2025-09-03"
+  },
+  {
+    "id": "blue-moment",
+    "title": "Blue Moment",
+    "titleJa": "ブルウモーメント",
+    "unitId": "dollchestra",
+    "sortOrder": 117,
+    "releaseDate": "2025-09-03"
+  },
+  {
+    "id": "very-very-coco-natsu",
+    "title": "Very! Very! COCO Natsu",
+    "titleJa": "Very! Very! COCO夏っ",
+    "unitId": "mira-cra-park",
+    "sortOrder": 118,
+    "releaseDate": "2025-09-03"
+  },
+  {
+    "id": "fusion-crust",
+    "title": "Fusion Crust",
+    "titleJa": "フュージョンクラスト",
+    "unitId": "edel-note",
+    "sortOrder": 119,
+    "releaseDate": "2025-09-03"
+  },
+  {
+    "id": "nyao-signyal",
+    "title": "Nyao Signyal",
+    "titleJa": "ニャオシグニャル",
+    "unitId": "mira-cra-park",
+    "sortOrder": 120,
+    "releaseDate": "2025-10-01"
+  },
+  {
+    "id": "heart-ni-q",
+    "title": "Heart ni Q",
+    "titleJa": "ハートにQ",
+    "unitId": "mira-cra-park",
+    "sortOrder": 121,
+    "releaseDate": "2025-10-01"
+  },
+  {
+    "id": "henyoku-no-toribaga",
+    "title": "Henyoku no Toribaga",
+    "titleJa": "片翼のトリバガ",
+    "unitId": "edel-note",
+    "sortOrder": 122,
+    "releaseDate": "2025-10-01"
+  },
+  {
+    "id": "drive-spade-crazy",
+    "title": "Drive Spade Crazy",
+    "unitId": "edel-note",
+    "sortOrder": 123,
+    "releaseDate": "2025-10-01",
+    "titleJa": "ドライブ・スペード・クレイジー"
+  },
+  {
+    "id": "hajimari-no-hane-oto",
+    "title": "Hajimari no Hane Oto",
+    "titleJa": "はじまりの羽音",
+    "unitId": "hasunosora",
+    "sortOrder": 124,
+    "releaseDate": "2025-11-26"
+  },
+  {
+    "id": "charming-na-hanataba-o",
+    "title": "Charming na Hanataba o!",
+    "titleJa": "チャーミングな花束を！",
+    "unitId": "hasunosora",
+    "sortOrder": 125,
+    "releaseDate": "2025-11-26"
+  },
+  {
+    "id": "runway",
+    "title": "Runway",
+    "unitId": "solo",
+    "sortOrder": 126,
+    "releaseDate": "2025-11-26",
+    "deezerArtistName": "Sayaka Murano",
+    "titleJa": "Runway"
+  },
+  {
+    "id": "cho-toutoi-love",
+    "title": "Cho, Toutoi LOVE",
+    "titleJa": "ちょ、尊いLOVE",
+    "unitId": "ruri-and-to",
+    "sortOrder": 127,
+    "releaseDate": "2025-12-03"
+  },
+  {
+    "id": "heisei-galz",
+    "title": "Heisei Galz!!!",
+    "unitId": "ruri-and-to",
+    "sortOrder": 128,
+    "releaseDate": "2025-12-03",
+    "titleJa": "Heisei Galz!!!"
+  },
+  {
+    "id": "new-black",
+    "title": "Nεw Black",
+    "unitId": "prince-epsilon",
+    "sortOrder": 129,
+    "releaseDate": "2025-12-03",
+    "titleJa": "Nεw Black"
+  },
+  {
+    "id": "ichigo-milk-love",
+    "title": "IcHiGo milK love",
+    "unitId": "prince-epsilon",
+    "sortOrder": 130,
+    "releaseDate": "2025-12-03",
+    "titleJa": "IcHiGo milK love"
+  },
+  {
+    "id": "otome-anthology",
+    "title": "Otome Anthology",
+    "titleJa": "乙女詞華集",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 131,
+    "releaseDate": "2025-12-10"
+  },
+  {
+    "id": "garland-flash",
+    "title": "Garland Flash",
+    "unitId": "dollchestra",
+    "sortOrder": 132,
+    "releaseDate": "2025-12-10",
+    "titleJa": "ガランドFlash"
+  },
+  {
+    "id": "vital-sign",
+    "title": "Vital Sign",
+    "titleJa": "バイタルサイン",
+    "unitId": "mira-cra-park",
+    "sortOrder": 133,
+    "releaseDate": "2025-12-10"
+  },
+  {
+    "id": "theater-ikizama",
+    "title": "Theater Ikizama",
+    "titleJa": "シアター生き様",
+    "unitId": "edel-note",
+    "sortOrder": 134,
+    "releaseDate": "2025-12-10"
+  },
+  {
+    "id": "haromegu-sanka",
+    "title": "HaroMegu Sanka",
+    "titleJa": "ハロめぐ賛歌",
+    "unitId": "solo",
+    "sortOrder": 135,
+    "releaseDate": "2026-01-11",
+    "deezerArtistName": "Megumi Fujishima"
+  },
+  {
+    "id": "berry-merry-go-round",
+    "title": "Berry Merry Go Round",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 136,
+    "releaseDate": "2026-01-23",
+    "titleJa": "Berry Merry Go Round"
+  },
+  {
+    "id": "freesia",
+    "title": "Freesia",
+    "titleJa": "フリジア",
+    "unitId": "dollchestra",
+    "sortOrder": 137,
+    "releaseDate": "2026-01-23"
+  },
+  {
+    "id": "panai",
+    "title": "PANAI☆",
+    "unitId": "mira-cra-park",
+    "sortOrder": 138,
+    "releaseDate": "2026-01-23",
+    "titleJa": "PANAI☆"
+  },
+  {
+    "id": "saka-now",
+    "title": "Saka now!",
+    "titleJa": "咲かnow!",
+    "unitId": "edel-note",
+    "sortOrder": 139,
+    "releaseDate": "2026-01-23"
+  },
+  {
+    "id": "echoes-beyond",
+    "title": "Echoes Beyond",
+    "unitId": "hasunosora",
+    "sortOrder": 140,
+    "releaseDate": "2026-01-28",
+    "titleJa": "Echoes Beyond"
+  },
+  {
+    "id": "joker",
+    "title": "JOKER.",
+    "unitId": "hasunosora",
+    "sortOrder": 141,
+    "releaseDate": "2026-01-28",
+    "titleJa": "JOKER."
+  },
+  {
+    "id": "sayo-shigure",
+    "title": "Sayo-Shigure",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 142,
+    "releaseDate": "2026-02-18",
+    "titleJa": "Sayo-Shigure"
+  },
+  {
+    "id": "reboot",
+    "title": "Reboot",
+    "titleJa": "リブウト",
+    "unitId": "dollchestra",
+    "sortOrder": 143,
+    "releaseDate": "2026-02-18"
+  },
+  {
+    "id": "hip-hip-hooray",
+    "title": "Hip, hip, hooray!",
+    "unitId": "mira-cra-park",
+    "sortOrder": 144,
+    "releaseDate": "2026-02-18",
+    "titleJa": "Hip, hip, hooray!"
+  },
+  {
+    "id": "reijou-mob",
+    "title": "Reijou Mob!",
+    "titleJa": "令嬢モブ！",
+    "unitId": "edel-note",
+    "sortOrder": 145,
+    "releaseDate": "2026-02-18"
+  },
+  {
+    "id": "fushigi-to-kimi-to-library",
+    "title": "Fushigi to Kimi to Library",
+    "titleJa": "不思議と君とライブラリー",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 146,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "fushigi-to-kimi-to-library-bgp",
+    "title": "Fushigi to Kimi to Library (B.G.P. Ver.)",
+    "titleJa": "不思議と君とライブラリー (B.G.P. Ver.)",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 147,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "kanazawa-katarenbo",
+    "title": "Kanazawa Katarenbo",
+    "titleJa": "金沢片恋慕",
+    "unitId": "cerise-bouquet",
+    "sortOrder": 148,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "icy",
+    "title": "Icy",
+    "titleJa": "アイシイ",
+    "unitId": "dollchestra",
+    "sortOrder": 149,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "icy-bgp",
+    "title": "Icy (B.G.P. Ver.)",
+    "titleJa": "アイシイ (B.G.P. Ver.)",
+    "unitId": "dollchestra",
+    "sortOrder": 150,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "umbrella",
+    "title": "Umbrella",
+    "unitId": "dollchestra",
+    "sortOrder": 151,
+    "releaseDate": "2026-04-08",
+    "titleJa": "アンブレラ"
+  },
+  {
+    "id": "tomodachi-ni-nareru-basho",
+    "title": "Tomodachi ni Nareru Basho",
+    "titleJa": "トモダチになれる場所",
+    "unitId": "mira-cra-park",
+    "sortOrder": 152,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "tomodachi-ni-nareru-basho-bgp",
+    "title": "Tomodachi ni Nareru Basho (B.G.P. Ver.)",
+    "titleJa": "トモダチになれる場所 (B.G.P. Ver.)",
+    "unitId": "mira-cra-park",
+    "sortOrder": 153,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "senpai",
+    "title": "Senpai",
+    "titleJa": "センパイ",
+    "unitId": "mira-cra-park",
+    "sortOrder": 154,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "edelinien",
+    "title": "EdelinieN",
+    "unitId": "edel-note",
+    "sortOrder": 155,
+    "releaseDate": "2026-04-08",
+    "titleJa": "EdelinieN"
+  },
+  {
+    "id": "mi-amor-meerkat",
+    "title": "Mi Amor Meerkat",
+    "unitId": "edel-note",
+    "sortOrder": 156,
+    "releaseDate": "2026-04-08",
+    "titleJa": "ミアモーレ・ミーアキャット"
+  },
+  {
+    "id": "a-deru-note",
+    "title": "A Deru Note",
+    "titleJa": "A出るノート",
+    "unitId": "edel-note",
+    "sortOrder": 157,
+    "releaseDate": "2026-04-08"
+  },
+  {
+    "id": "hitoyo-ni-yume-ga-saku-you-ni",
+    "title": "Hitoyo ni Yume ga Saku You ni",
+    "titleJa": "一夜に夢が咲くように",
+    "unitId": "hasunosora",
+    "sortOrder": 158,
+    "releaseDate": "2026-04-15"
+  },
+  {
+    "id": "yuki-mau-sora-to-nibyou-no-eien",
+    "title": "Yuki Mau Sora to Nibyou no Eien",
+    "titleJa": "雪舞う空と二秒の永遠",
+    "unitId": "hasunosora",
+    "sortOrder": 159,
+    "releaseDate": "2026-04-15"
+  },
+  {
+    "id": "ima-kako-mirai-no-sangenshoku",
+    "title": "Ima, Kako, Mirai no Sangenshoku",
+    "titleJa": "今、過去、未来の三原色",
+    "unitId": "hasunosora",
+    "sortOrder": 160,
+    "releaseDate": "2026-04-15"
+  },
+  {
+    "id": "hana-sakeba-yume-kakeru",
+    "title": "Hana Sakeba Yume Kakeru",
+    "titleJa": "ハナ咲けばユメ駆ける",
+    "unitId": "hasunosora",
+    "sortOrder": 161,
+    "releaseDate": "2026-06-03"
+  },
+  {
+    "id": "hikari-no-naka-de-hana-saite",
+    "title": "Hikari no Naka de Hana Saite",
+    "titleJa": "光の中で花咲いて",
+    "unitId": "hasunosora",
+    "sortOrder": 162,
+    "releaseDate": "2026-06-03"
+  },
+  {
+    "id": "dream-believers-bgp",
+    "title": "Dream Believers (B.G.P. Ver.)",
+    "unitId": "hasunosora",
+    "sortOrder": 163,
+    "releaseDate": "2026-06-03",
+    "deezerSearchTitle": "Dream Believers B.G.P. Ver.",
+    "titleJa": "Dream Believers (B.G.P. Ver.)"
+  }
+]

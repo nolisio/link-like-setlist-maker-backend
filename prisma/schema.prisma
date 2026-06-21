@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Unit {
+  id        String   @id
+  name      String
+  sortOrder Int      @default(0)
+  songs     Song[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Song {
+  id                String        @id
+  title             String
+  titleJa           String
+  unitId            String
+  sortOrder         Int           @default(0)
+  releaseDate       DateTime?
+  deezerSearchTitle String?
+  deezerArtistName  String?
+  deezerArtistId    Int?
+  deezerTrackId     BigInt?
+  unit              Unit          @relation(fields: [unitId], references: [id], onDelete: Restrict)
+  items             SetlistItem[]
+  preview           SongPreview?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  @@index([unitId])
+  @@index([deezerTrackId])
+}
+
+model SongPreview {
+  songId            String   @id
+  status            String
+  deezerTrackId     BigInt?
+  deezerTrackTitle  String?
+  deezerArtistName  String?
+  deezerAlbumTitle  String?
+  duration          Int?
+  previewUrl        String?
+  trackLink         String?
+  isrc              String?
+  rank              Int?
+  fetchedAt         DateTime @default(now())
+  song              Song     @relation(fields: [songId], references: [id], onDelete: Cascade)
+}
+
+model Setlist {
+  id          String        @id @default(cuid())
+  title       String
+  description String?
+  items       SetlistItem[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model SetlistItem {
+  id        String  @id @default(cuid())
+  setlistId String
+  songId    String
+  position  Int
+  memo      String?
+  setlist   Setlist @relation(fields: [setlistId], references: [id], onDelete: Cascade)
+  song      Song    @relation(fields: [songId], references: [id], onDelete: Restrict)
+
+  @@unique([setlistId, position])
+  @@index([songId])
+}
