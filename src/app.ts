@@ -3,11 +3,13 @@ import { OpenAPIHono } from "@hono/zod-openapi";
 import { cors } from "hono/cors";
 import { config } from "./config.js";
 import { AppError, errorBody } from "./errors.js";
+import { createPublicApiSecurityMiddleware } from "./middleware/security.js";
 import { registerCatalogRoutes } from "./routes/catalog.js";
 import { registerHealthRoutes } from "./routes/health.js";
 import { registerSetlistRoutes } from "./routes/setlists.js";
+import type { AppEnv } from "./supabaseServer.js";
 
-const app = new OpenAPIHono({
+const app = new OpenAPIHono<AppEnv>({
   defaultHook: (result, c) => {
     if (!result.success) {
       return c.json(errorBody("VALIDATION_ERROR", "Request validation failed", result.error.flatten()), 400);
@@ -19,11 +21,12 @@ app.use(
   "*",
   cors({
     origin: config.corsOrigin,
-    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowMethods: ["GET", "POST", "OPTIONS"],
     allowHeaders: ["Content-Type"],
     credentials: false
   })
 );
+app.use("*", createPublicApiSecurityMiddleware());
 
 registerHealthRoutes(app);
 registerCatalogRoutes(app);
@@ -34,7 +37,7 @@ app.doc("/openapi.json", {
   info: {
     title: "Link Like Setlist Maker API",
     version: "1.0.0",
-    description: "Backend API for catalog lookup and setlist CRUD."
+    description: "Backend API for catalog lookup and setlist sharing."
   }
 });
 

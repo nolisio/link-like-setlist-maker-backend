@@ -1,6 +1,7 @@
 node_modules
 dist
 .env
+tmp/
 *.db
 *.db-journal
 supabase/.temp

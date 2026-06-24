@@ -79,3 +79,16 @@ export async function searchDeezerTracks(query: string, limit = config.deezerSea
   const json = await requestJson(`/search?${params.toString()}`);
   return DeezerSearchSchema.parse(json).data;
 }
+
+export async function getDeezerArtistTopTracks(artistId: number, limit = 50) {
+  const params = new URLSearchParams({
+    limit: String(limit)
+  });
+  const json = await requestJson(`/artist/${artistId}/top?${params.toString()}`);
+  return DeezerSearchSchema.parse(json).data;
+}
+
+export async function getDeezerAlbumTracks(albumId: number) {
+  const json = await requestJson(`/album/${albumId}/tracks`);
+  return DeezerSearchSchema.parse(json).data;
+}

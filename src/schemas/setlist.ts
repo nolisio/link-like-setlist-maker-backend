@@ -16,8 +16,6 @@ export const SetlistCreateRequestSchema = z
   })
   .openapi("SetlistCreateRequest");
 
-export const SetlistUpdateRequestSchema = SetlistCreateRequestSchema.openapi("SetlistUpdateRequest");
-
 export const SetlistParamsSchema = z.object({
   id: z.string().min(1).openapi({
     param: {
@@ -49,12 +47,6 @@ export const SetlistSchema = z
     updatedAt: z.string().datetime()
   })
   .openapi("Setlist");
-
-export const SetlistsResponseSchema = z
-  .object({
-    setlists: z.array(SetlistSchema)
-  })
-  .openapi("SetlistsResponse");
 
 export const SetlistResponseSchema = z
   .object({

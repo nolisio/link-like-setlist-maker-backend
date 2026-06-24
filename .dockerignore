@@ -1,0 +1,11 @@
+.env
+.env.*
+.git
+.gitignore
+dist
+docs
+node_modules
+supabase
+tmp
+coverage
+*.log

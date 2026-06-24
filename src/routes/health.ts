@@ -1,4 +1,5 @@
 import { createRoute, z, type OpenAPIHono } from "@hono/zod-openapi";
+import type { AppEnv } from "../supabaseServer.js";
 
 const healthRoute = createRoute({
   method: "get",
@@ -18,6 +19,6 @@ const healthRoute = createRoute({
   }
 });
 
-export function registerHealthRoutes(app: OpenAPIHono) {
+export function registerHealthRoutes(app: OpenAPIHono<AppEnv>) {
   app.openapi(healthRoute, (c) => c.json({ status: "ok" as const }, 200));
 }

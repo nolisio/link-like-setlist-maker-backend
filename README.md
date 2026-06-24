@@ -1,16 +1,13 @@
 # link-like-setlist-maker-backend
 
-Hono + Prisma backend for the Link! Like! setlist maker. The database runtime is Supabase Postgres.
+Hono + Prisma backend for the Link! Like! setlist maker. The development database runtime is Supabase Cloud Postgres.
 
-## Local development
+## Development setup
 
-1. Start Supabase local:
+1. Copy `.env.example` to `.env` and fill in the shared development `Supabase Cloud` URLs, the shared `BACKEND_API_TOKEN`, plus the disposable `TEST_*` database URLs.
+   Also set `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`, and `SUPABASE_JWKS_URL` for `@supabase/server`. Copy them from the Supabase dashboard `Connect` dialog and never commit a real secret key.
 
-```bash
-npm run supabase:start
-```
-
-2. Apply Prisma migrations:
+2. Apply Prisma migrations to the shared development database:
 
 ```bash
 npm run db:migrate
@@ -28,8 +25,6 @@ npm run db:seed
 npm run dev
 ```
 
-The default local database URL is `postgresql://postgres:postgres@127.0.0.1:54322/postgres`.
-
 ## Verification
 
 ```bash
@@ -38,12 +33,24 @@ npm test
 npm run build
 ```
 
+`npm test` requires `TEST_DATABASE_URL` and uses `TEST_DIRECT_URL` when provided. Tests reset that database with `prisma migrate reset --force`, so it must point at a disposable database whose name explicitly includes `test`.
+
+## Public API hardening
+
+The public setlist API intentionally supports only anonymous create and ID-based read:
+
+- `POST /api/setlists`
+- `GET /api/setlists/:id`
+
+Do not expose anonymous list, update, or delete endpoints without adding authentication and ownership checks. Set `BACKEND_API_TOKEN` to the same secret used by the frontend server; protected write and preview requests without that token return `401`. Public write and forced preview-refresh requests are also protected by in-process rate limits; keep edge/CDN rate limits enabled in production as the outer enforcement layer.
+
 ## Supabase project setup
 
-1. Create a new Supabase project and set a database password.
-2. In the dashboard, open `Connect` and copy the Postgres connection string.
-3. Set `DATABASE_URL` and `DIRECT_URL` in `.env`.
-4. Create a Prisma role for production use:
+1. Create the shared Supabase Cloud project used for development and set a database password.
+2. In the dashboard, open `Connect` and copy the project URL, publishable key, secret key, JWKS URL, and Postgres connection strings.
+3. Set `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SECRET_KEY`, `SUPABASE_JWKS_URL`, `BACKEND_API_TOKEN`, `DATABASE_URL`, and `DIRECT_URL` in `.env`.
+4. Provision a separate disposable test database and set `TEST_DATABASE_URL` and `TEST_DIRECT_URL` in `.env`.
+5. Create a Prisma role for production use:
 
 ```sql
 create user "prisma" with password 'replace-me' bypassrls createdb;
@@ -58,4 +65,15 @@ alter default privileges for role postgres in schema public grant all on routine
 alter default privileges for role postgres in schema public grant all on sequences to prisma;
 ```
 
-For this backend, use a direct Postgres connection by default. If deployment later moves to an IPv4-only or serverless environment, switch to a Supabase pooler URL at that point.
+For this backend, use a direct Postgres connection by default. If deployment later moves to an IPv4-only or serverless environment, switch the application-facing `DATABASE_URL` to a pooler URL at that point while keeping `DIRECT_URL` as the direct migration connection.
+
+## Supabase / Prisma operation policy
+
+This project uses Supabase as the Postgres runtime and Prisma as the application-side schema and access layer. Use the following rules as the source of truth for day-to-day operation.
+
+1. Schema changes must be managed in `prisma/schema.prisma` and `prisma/migrations/`. Do not add a separate migration flow under `supabase/`.
+2. Treat `DATABASE_URL` as the application runtime connection and `DIRECT_URL` as the direct connection used for Prisma migration and other administrative commands.
+3. Separate database roles by purpose in hosted environments. Migration commands may require elevated privileges, but the API runtime should use a narrower role.
+4. Be careful with `npm test`. The test script runs `prisma migrate reset --force` against `TEST_DATABASE_URL`, so that URL must only point at a disposable test database.
+5. Seed data is managed by Prisma. Keep catalog bootstrap data in `prisma/seed.ts` and `prisma/seed-data/`, and do not introduce a second seed flow through Supabase CLI.
+6. The current backend relies on Supabase primarily as the hosted Postgres provider. Do not assume Auth, Storage, Realtime, or other Supabase features are part of the application contract unless code is added for them.

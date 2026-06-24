@@ -2,11 +2,8 @@ import { AppError } from "../errors.js";
 import { findExistingSongIds } from "../repositories/catalogRepository.js";
 import {
   createSetlist as createSetlistInRepository,
-  deleteSetlist as deleteSetlistInRepository,
   findSetlistById,
-  listSetlists as listSetlistsFromRepository,
   type SetlistWriteInput,
-  updateSetlist as updateSetlistInRepository
 } from "../repositories/setlistRepository.js";
 
 async function assertSongsExist(items: SetlistWriteInput["items"] = []) {
@@ -17,10 +14,6 @@ async function assertSongsExist(items: SetlistWriteInput["items"] = []) {
   if (missingSongIds.length > 0) {
     throw new AppError(400, "INVALID_SONG", "One or more songs do not exist", { songIds: missingSongIds });
   }
-}
-
-export async function listSetlists() {
-  return listSetlistsFromRepository();
 }
 
 export async function getSetlist(id: string) {
@@ -36,23 +29,4 @@ export async function getSetlist(id: string) {
 export async function createSetlist(input: SetlistWriteInput) {
   await assertSongsExist(input.items);
   return createSetlistInRepository(input);
-}
-
-export async function updateSetlist(id: string, input: SetlistWriteInput) {
-  await assertSongsExist(input.items);
-  const setlist = await updateSetlistInRepository(id, input);
-
-  if (!setlist) {
-    throw new AppError(404, "NOT_FOUND", "Setlist not found");
-  }
-
-  return setlist;
-}
-
-export async function deleteSetlist(id: string) {
-  const deleted = await deleteSetlistInRepository(id);
-
-  if (!deleted) {
-    throw new AppError(404, "NOT_FOUND", "Setlist not found");
-  }
 }

@@ -27,15 +27,6 @@ export type SetlistWriteInput = {
   }>;
 };
 
-export async function listSetlists() {
-  return prisma.setlist.findMany({
-    include: setlistInclude,
-    orderBy: {
-      updatedAt: "desc"
-    }
-  });
-}
-
 export async function findSetlistById(id: string) {
   return prisma.setlist.findUnique({
     where: { id },
@@ -58,54 +49,4 @@ export async function createSetlist(input: SetlistWriteInput) {
     },
     include: setlistInclude
   });
-}
-
-export async function updateSetlist(id: string, input: SetlistWriteInput) {
-  return prisma.$transaction(async (tx) => {
-    const existing = await tx.setlist.findUnique({
-      where: { id },
-      select: { id: true }
-    });
-
-    if (!existing) {
-      return null;
-    }
-
-    await tx.setlistItem.deleteMany({
-      where: { setlistId: id }
-    });
-
-    return tx.setlist.update({
-      where: { id },
-      data: {
-        title: input.title,
-        description: input.description ?? null,
-        items: {
-          create: (input.items ?? []).map((item, index) => ({
-            songId: item.songId,
-            memo: item.memo ?? null,
-            position: index + 1
-          }))
-        }
-      },
-      include: setlistInclude
-    });
-  });
-}
-
-export async function deleteSetlist(id: string) {
-  const existing = await prisma.setlist.findUnique({
-    where: { id },
-    select: { id: true }
-  });
-
-  if (!existing) {
-    return false;
-  }
-
-  await prisma.setlist.delete({
-    where: { id }
-  });
-
-  return true;
 }

@@ -12,6 +12,7 @@ import { ErrorResponseSchema } from "../schemas/error.js";
 import { SongPreviewQuerySchema, SongPreviewResponseSchema } from "../schemas/songPreview.js";
 import { getSong, listSongs, listUnits } from "../services/catalogService.js";
 import { getSongPreview } from "../services/songPreviewService.js";
+import { createCatalogSupabaseMiddleware, getSupabaseContext, type AppEnv } from "../supabaseServer.js";
 
 const listUnitsRoute = createRoute({
   method: "get",
@@ -103,19 +104,28 @@ const getSongPreviewRoute = createRoute({
   }
 });
 
-export function registerCatalogRoutes(app: OpenAPIHono) {
+export function registerCatalogRoutes(app: OpenAPIHono<AppEnv>) {
+  const catalogSupabase = createCatalogSupabaseMiddleware();
+
+  app.use("/api/units", catalogSupabase);
+  app.use("/api/songs", catalogSupabase);
+  app.use("/api/songs/*", catalogSupabase);
+
   app.openapi(listUnitsRoute, async (c) => {
+    getSupabaseContext(c);
     const units = await listUnits();
     return c.json({ units: units.map(presentUnit) }, 200);
   });
 
   app.openapi(listSongsRoute, async (c) => {
+    getSupabaseContext(c);
     const query = c.req.valid("query");
     const songs = await listSongs(query);
     return c.json({ songs: songs.map(presentSong) }, 200);
   });
 
   app.openapi(getSongPreviewRoute, async (c) => {
+    getSupabaseContext(c);
     const { id } = c.req.valid("param");
     const { refresh } = c.req.valid("query");
     const preview = await getSongPreview(id, { refresh: refresh === "true" });
@@ -124,6 +134,7 @@ export function registerCatalogRoutes(app: OpenAPIHono) {
   });
 
   app.openapi(getSongRoute, async (c) => {
+    getSupabaseContext(c);
     const { id } = c.req.valid("param");
     const song = await getSong(id).catch((error: unknown) => {
       if (error instanceof AppError) {

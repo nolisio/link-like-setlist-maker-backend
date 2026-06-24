@@ -23,6 +23,10 @@ async function readJson(response: Response) {
   return response.json() as Promise<unknown>;
 }
 
+const serviceAuthHeaders = {
+  authorization: `Bearer ${process.env.BACKEND_API_TOKEN ?? "test-backend-token"}`
+};
+
 beforeEach(async () => {
   await resetDatabase();
 });
@@ -73,6 +77,46 @@ describe("catalog API", () => {
         expect.objectContaining({ id: "dream-believers", title: "Dream Believers" }),
         expect.objectContaining({ id: "eien-no-euphoria", title: "永遠のEuphoria" }),
         expect.objectContaining({ id: "holiday-holiday", title: "Holiday∞Holiday" })
+      ])
+    );
+  });
+
+  it("includes separately distributed 104th collection versions as distinct songs", async () => {
+    const response = await app.request("/api/songs");
+
+    expect(response.status).toBe(200);
+    const body = (await response.json()) as {
+      songs: Array<{ id: string }>;
+    };
+
+    expect(body.songs.map((song) => song.id)).toEqual(
+      expect.arrayContaining([
+        "deepness-rec",
+        "natsumeki-pain-104",
+        "trick-and-cute-104",
+        "tsubasa-la-liberte-104",
+        "link-to-the-future-104",
+        "suisai-sekai-104",
+        "mix-shake-104",
+        "holiday-holiday-104",
+        "genyou-yakou-104",
+        "sugao-no-pixel-104",
+        "senpen-banka-104",
+        "sugar-melt-104",
+        "awoke-104",
+        "kibouteki-prism-104",
+        "tragic-drops-104",
+        "mirage-voyage-104",
+        "take-it-over-104",
+        "knot-104",
+        "seishun-no-rinkaku-104",
+        "do-do-do-104",
+        "hakuchuu-a-la-mode-104",
+        "kokon-tozai-104",
+        "nonfiction-hero-show-104",
+        "ishin-denshin-104",
+        "mahara-jamboree-104",
+        "tensai-nano-kamo-shirenai-104"
       ])
     );
   });
@@ -174,8 +218,8 @@ describe("song preview API", () => {
       preview: "https://cdnt-preview.dzcdn.net/holiday.mp3"
     });
 
-    const firstResponse = await app.request("/api/songs/holiday-holiday/preview");
-    const secondResponse = await app.request("/api/songs/holiday-holiday/preview");
+    const firstResponse = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
+    const secondResponse = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
 
     expect(firstResponse.status).toBe(200);
     await expect(firstResponse.json()).resolves.toMatchObject({
@@ -248,8 +292,8 @@ describe("song preview API", () => {
       );
     vi.stubGlobal("fetch", fetchMock);
 
-    await app.request("/api/songs/holiday-holiday/preview");
-    const response = await app.request("/api/songs/holiday-holiday/preview?refresh=true");
+    await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
+    const response = await app.request("/api/songs/holiday-holiday/preview?refresh=true", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -281,7 +325,7 @@ describe("song preview API", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
 
-    const response = await app.request("/api/songs/dream-believers/preview");
+    const response = await app.request("/api/songs/dream-believers/preview", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -298,7 +342,7 @@ describe("song preview API", () => {
     const fetchMock = vi.fn(async () => Response.json({ data: [], total: 0 }));
     vi.stubGlobal("fetch", fetchMock);
 
-    const response = await app.request("/api/songs/on-your-mark/preview");
+    const response = await app.request("/api/songs/on-your-mark/preview", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -318,7 +362,7 @@ describe("song preview API", () => {
       albumTitle: "Holiday∞Holiday",
       preview: "https://cdnt-preview.dzcdn.net/holiday.mp3"
     });
-    await app.request("/api/songs/holiday-holiday/preview");
+    await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
 
     const staleFetchedAt = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
     await prisma.songPreview.update({
@@ -327,7 +371,7 @@ describe("song preview API", () => {
     });
 
     fetchMock.mockRejectedValueOnce(new Error("Deezer is unavailable"));
-    const response = await app.request("/api/songs/holiday-holiday/preview");
+    const response = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -342,7 +386,7 @@ describe("song preview API", () => {
   });
 
   it("returns 404 for preview lookup on an unknown song", async () => {
-    const response = await app.request("/api/songs/missing-song/preview");
+    const response = await app.request("/api/songs/missing-song/preview", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(404);
     await expect(response.json()).resolves.toEqual({
@@ -380,7 +424,7 @@ describe("song preview API", () => {
     });
     vi.stubGlobal("fetch", fetchMock);
 
-    const response = await app.request("/api/songs/dream-believers/preview");
+    const response = await app.request("/api/songs/dream-believers/preview", { headers: serviceAuthHeaders });
 
     expect(response.status).toBe(200);
     await expect(response.json()).resolves.toMatchObject({
@@ -397,10 +441,10 @@ describe("song preview API", () => {
 });
 
 describe("setlist API", () => {
-  it("creates, reads, lists, updates, and deletes a setlist", async () => {
+  it("creates and reads a setlist", async () => {
     const createResponse = await app.request("/api/setlists", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { ...serviceAuthHeaders, "content-type": "application/json" },
       body: JSON.stringify({
         title: "Opening block",
         description: "Two song flow",
@@ -426,58 +470,26 @@ describe("setlist API", () => {
     await expect(getResponse.json()).resolves.toMatchObject({
       setlist: { id: created.setlist.id, title: "Opening block" }
     });
-
-    const listResponse = await app.request("/api/setlists");
-    expect(listResponse.status).toBe(200);
-    const list = (await listResponse.json()) as { setlists: Array<{ id: string }> };
-    expect(list.setlists.map((setlist) => setlist.id)).toContain(created.setlist.id);
-
-    const updateResponse = await app.request(`/api/setlists/${created.setlist.id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        title: "Final block",
-        items: [{ songId: "on-your-mark", memo: "Closer" }]
-      })
-    });
-    expect(updateResponse.status).toBe(200);
-    await expect(updateResponse.json()).resolves.toMatchObject({
-      setlist: {
-        id: created.setlist.id,
-        title: "Final block",
-        description: null,
-        items: [expect.objectContaining({ position: 1, songId: "on-your-mark", memo: "Closer" })]
-      }
-    });
-
-    const deleteResponse = await app.request(`/api/setlists/${created.setlist.id}`, { method: "DELETE" });
-    expect(deleteResponse.status).toBe(204);
-
-    const deletedGetResponse = await app.request(`/api/setlists/${created.setlist.id}`);
-    expect(deletedGetResponse.status).toBe(404);
-    await expect(deletedGetResponse.json()).resolves.toEqual({
-      error: { code: "NOT_FOUND", message: "Setlist not found" }
-    });
   });
 
   it("rejects invalid setlist payloads and unknown song ids", async () => {
     const blankTitleResponse = await app.request("/api/setlists", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { ...serviceAuthHeaders, "content-type": "application/json" },
       body: JSON.stringify({ title: "   ", items: [] })
     });
     expect(blankTitleResponse.status).toBe(400);
 
     const malformedItemsResponse = await app.request("/api/setlists", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { ...serviceAuthHeaders, "content-type": "application/json" },
       body: JSON.stringify({ title: "Bad items", items: [{ memo: "missing song" }] })
     });
     expect(malformedItemsResponse.status).toBe(400);
 
     const unknownSongResponse = await app.request("/api/setlists", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { ...serviceAuthHeaders, "content-type": "application/json" },
       body: JSON.stringify({ title: "Unknown song", items: [{ songId: "missing-song" }] })
     });
     expect(unknownSongResponse.status).toBe(400);
