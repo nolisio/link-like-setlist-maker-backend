@@ -3,7 +3,7 @@ import { z } from "@hono/zod-openapi";
 export const UnitSchema = z
   .object({
     id: z.string().openapi({ example: "hasunosora" }),
-    name: z.string().openapi({ example: "Hasunosora Girls' High School Idol Club" }),
+    name: z.string().openapi({ example: "蓮ノ空女学院スクールアイドルクラブ" }),
     sortOrder: z.number().int().openapi({ example: 1 })
   })
   .openapi("Unit");

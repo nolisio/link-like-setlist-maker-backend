@@ -1,12 +1,12 @@
 [
   {
     "id": "hasunosora",
-    "name": "Hasunosora Girls' High School Idol Club",
+    "name": "蓮ノ空女学院スクールアイドルクラブ",
     "sortOrder": 1
   },
   {
     "id": "cerise-bouquet",
-    "name": "Cerise Bouquet",
+    "name": "スリーズブーケ",
     "sortOrder": 2
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "id": "mira-cra-park",
-    "name": "Mira-Cra Park!",
+    "name": "みらくらぱーく！",
     "sortOrder": 4
   },
   {
@@ -26,17 +26,17 @@
   },
   {
     "id": "rurino-to-yukai-na-tsuzuri-tachi",
-    "name": "Rurino to Yukai na Tsuzuri-tachi",
+    "name": "瑠璃乃と愉快なつづりたち",
     "sortOrder": 6
   },
   {
     "id": "kahomegu-gelato",
-    "name": "KahoMegu Gelato",
+    "name": "かほめぐじぇらーと",
     "sortOrder": 7
   },
   {
     "id": "hasu-no-kyuujitsu",
-    "name": "Hasu no Kyuujitsu",
+    "name": "はすの休日",
     "sortOrder": 8
   },
   {
@@ -51,12 +51,12 @@
   },
   {
     "id": "solo",
-    "name": "Solo",
+    "name": "ソロ",
     "sortOrder": 11
   },
   {
     "id": "collaboration",
-    "name": "Collaboration",
+    "name": "コラボレーション",
     "sortOrder": 12
   }
 ]

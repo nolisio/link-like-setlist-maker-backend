@@ -6,7 +6,7 @@ const { prismaMock } = vi.hoisted(() => {
   const now = new Date("2026-06-24T00:00:00.000Z");
   const unit = {
     id: "hasunosora",
-    name: "Hasunosora Girls' High School Idol Club",
+    name: "蓮ノ空女学院スクールアイドルクラブ",
     sortOrder: 1,
     createdAt: now,
     updatedAt: now

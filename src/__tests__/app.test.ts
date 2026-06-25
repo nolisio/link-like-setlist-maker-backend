@@ -69,7 +69,7 @@ describe("catalog API", () => {
 
     expect(units.units).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ id: "hasunosora", name: "Hasunosora Girls' High School Idol Club" })
+        expect.objectContaining({ id: "hasunosora", name: "蓮ノ空女学院スクールアイドルクラブ" })
       ])
     );
     expect(songs.songs).toEqual(
