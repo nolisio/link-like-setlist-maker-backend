@@ -361,6 +361,42 @@ describe("song preview API", () => {
     });
   });
 
+  it("does not use an exact-title Deezer result from an unrelated artist when the seeded song has no artist hint", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        Response.json({
+          data: [
+            {
+              id: 2189790907,
+              readable: true,
+              title: "ペレニアル",
+              link: "https://www.deezer.com/track/2189790907",
+              duration: 148,
+              rank: 100000,
+              preview: "https://cdnt-preview.dzcdn.net/perenial.mp3",
+              artist: { id: 123456789, name: "リラクゼーション Club 自然", type: "artist" },
+              album: { id: 987654321, title: "フロントガラス越しに", type: "album" },
+              type: "track"
+            }
+          ],
+          total: 1
+        })
+      )
+    );
+
+    const response = await app.request("/api/songs/perenial/preview", { headers: serviceAuthHeaders });
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({
+      songId: "perenial",
+      status: "not_found",
+      source: "deezer",
+      stale: false,
+      preview: null
+    });
+  });
+
   it("does not treat a shorter same-artist title as the requested versioned song", async () => {
     await prisma.song.update({
       where: { id: "holiday-holiday" },

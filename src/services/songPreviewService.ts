@@ -143,12 +143,22 @@ async function lookupPreview(song: SongWithUnit) {
     return previewFromTrack(await getDeezerTrack(Number(song.deezerTrackId)));
   }
 
+  if (!hasDeezerSearchHint(song)) {
+    return null;
+  }
+
   const title = song.deezerSearchTitle ?? song.titleJa ?? song.title;
   const query = [title, song.deezerArtistName].filter(Boolean).join(" ");
   const tracks = await searchDeezerTracks(query);
   const match = chooseBestCandidate(song, tracks);
 
   return match ? previewFromTrack(match) : null;
+}
+
+function hasDeezerSearchHint(song: SongWithUnit) {
+  return Boolean(
+    song.deezerSearchTitle || song.deezerArtistName || song.deezerArtistId
+  );
 }
 
 function chooseBestCandidate(song: SongWithUnit, tracks: DeezerTrack[]) {
