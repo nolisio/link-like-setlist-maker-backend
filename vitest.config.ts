@@ -6,6 +6,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ["src/__tests__/setup.ts"],
     exclude: ["dist/**", "node_modules/**"],
+    fileParallelism: false,
     sequence: {
       concurrent: false
     }

@@ -55,7 +55,8 @@ export async function refreshSongPreviewForSong(
   options: { refresh?: boolean } = {}
 ): Promise<SongPreviewRefreshResult> {
   const cache = await findSongPreview(song.id);
-  if (!options.refresh && cache && isFresh(cache.fetchedAt)) {
+  const cacheMatchesSong = cache ? cachedPreviewMatchesSong(song, cache) : false;
+  if (!options.refresh && cache && isFresh(cache.fetchedAt) && cacheMatchesSong) {
     return {
       ...resultFromCache(cache, "cache", false),
       skipped: true
@@ -88,7 +89,7 @@ export async function refreshSongPreviewForSong(
       skipped: false
     };
   } catch (error) {
-    if (cache?.status === "found" && cache.previewUrl) {
+    if (cacheMatchesSong && cache?.status === "found" && cache.previewUrl) {
       return {
         ...resultFromCache(cache, "cache", true, "unavailable"),
         skipped: false
@@ -110,6 +111,31 @@ export async function refreshSongPreviewForSong(
 function isFresh(fetchedAt: Date) {
   const ageMs = Date.now() - fetchedAt.getTime();
   return ageMs <= config.deezerPreviewCacheTtlSeconds * 1000;
+}
+
+function cachedPreviewMatchesSong(song: SongWithUnit, cache: SongPreview) {
+  if (cache.status !== "found") {
+    return true;
+  }
+
+  if (!cache.previewUrl || !cache.deezerTrackTitle) {
+    return false;
+  }
+
+  if (song.deezerTrackId) {
+    return cache.deezerTrackId ? Number(cache.deezerTrackId) === Number(song.deezerTrackId) : false;
+  }
+
+  const expectedTitle = normalize(song.deezerSearchTitle ?? song.titleJa ?? song.title);
+  if (!titleMatches(expectedTitle, cache.deezerTrackTitle)) {
+    return false;
+  }
+
+  if (!song.deezerArtistName) {
+    return true;
+  }
+
+  return cache.deezerArtistName ? normalize(cache.deezerArtistName) === normalize(song.deezerArtistName) : false;
 }
 
 async function lookupPreview(song: SongWithUnit) {
@@ -136,7 +162,7 @@ function chooseBestCandidate(song: SongWithUnit, tracks: DeezerTrack[]) {
 
   if (song.deezerArtistId) {
     const artistMatches = candidates.filter((track) => track.artist.id === song.deezerArtistId);
-    return artistMatches.find((track) => titleMatches(expectedTitle, track.title)) ?? artistMatches[0] ?? null;
+    return artistMatches.find((track) => titleMatches(expectedTitle, track.title)) ?? null;
   }
 
   return (
@@ -153,8 +179,9 @@ function hasPreview(track: DeezerTrack) {
 }
 
 function titleMatches(expectedTitle: string, candidateTitle: string) {
+  const expected = normalize(expectedTitle);
   const candidate = normalize(candidateTitle);
-  return candidate === expectedTitle || candidate.includes(expectedTitle) || expectedTitle.includes(candidate);
+  return candidate === expected;
 }
 
 function normalize(value: string) {

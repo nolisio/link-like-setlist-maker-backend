@@ -19,6 +19,13 @@ async function resetDatabase() {
   await seedCatalog();
 }
 
+async function forceSearchPreviewLookup(songId: string) {
+  await prisma.song.update({
+    where: { id: songId },
+    data: { deezerTrackId: null }
+  });
+}
+
 beforeEach(async () => {
   await resetDatabase();
 });
@@ -29,6 +36,7 @@ afterEach(() => {
 
 describe("song preview backfill", () => {
   it("stores found previews for track-id and search-based songs", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     const fetchMock = vi.fn(async (input: URL | RequestInfo) => {
       const url = String(input);
       if (url.includes("/track/2967993121")) {
@@ -94,6 +102,7 @@ describe("song preview backfill", () => {
   });
 
   it("skips fresh cached previews unless refresh is requested", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     vi.stubGlobal(
       "fetch",
       vi.fn(async () =>
@@ -143,6 +152,7 @@ describe("song preview backfill", () => {
   });
 
   it("stores not_found when Deezer has no usable match", async () => {
+    await forceSearchPreviewLookup("on-your-mark");
     vi.stubGlobal(
       "fetch",
       vi.fn(async () =>
@@ -171,6 +181,7 @@ describe("song preview backfill", () => {
   });
 
   it("stores unavailable and continues processing later songs", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     const fetchMock = vi.fn(async (input: URL | RequestInfo) => {
       const url = String(input);
       if (url.includes("/track/2967993121")) {

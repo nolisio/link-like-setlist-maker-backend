@@ -81,46 +81,6 @@ describe("catalog API", () => {
     );
   });
 
-  it("includes separately distributed 104th collection versions as distinct songs", async () => {
-    const response = await app.request("/api/songs");
-
-    expect(response.status).toBe(200);
-    const body = (await response.json()) as {
-      songs: Array<{ id: string }>;
-    };
-
-    expect(body.songs.map((song) => song.id)).toEqual(
-      expect.arrayContaining([
-        "deepness-rec",
-        "natsumeki-pain-104",
-        "trick-and-cute-104",
-        "tsubasa-la-liberte-104",
-        "link-to-the-future-104",
-        "suisai-sekai-104",
-        "mix-shake-104",
-        "holiday-holiday-104",
-        "genyou-yakou-104",
-        "sugao-no-pixel-104",
-        "senpen-banka-104",
-        "sugar-melt-104",
-        "awoke-104",
-        "kibouteki-prism-104",
-        "tragic-drops-104",
-        "mirage-voyage-104",
-        "take-it-over-104",
-        "knot-104",
-        "seishun-no-rinkaku-104",
-        "do-do-do-104",
-        "hakuchuu-a-la-mode-104",
-        "kokon-tozai-104",
-        "nonfiction-hero-show-104",
-        "ishin-denshin-104",
-        "mahara-jamboree-104",
-        "tensai-nano-kamo-shirenai-104"
-      ])
-    );
-  });
-
   it("filters songs by query and unit", async () => {
     const response = await app.request("/api/songs?q=holiday&unitId=cerise-bouquet");
 
@@ -164,6 +124,13 @@ describe("catalog API", () => {
 });
 
 describe("song preview API", () => {
+  async function forceSearchPreviewLookup(songId: string) {
+    await prisma.song.update({
+      where: { id: songId },
+      data: { deezerTrackId: null }
+    });
+  }
+
   function stubDeezerSearchResponse(track: {
     id: number;
     title: string;
@@ -210,6 +177,7 @@ describe("song preview API", () => {
   }
 
   it("fetches a Deezer preview through search and then serves it from cache", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     const fetchMock = stubDeezerSearchResponse({
       id: 2967994891,
       title: "Holiday∞Holiday",
@@ -250,6 +218,7 @@ describe("song preview API", () => {
   });
 
   it("refreshes Deezer preview cache when refresh=true is provided", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     const fetchMock = vi
       .fn()
       .mockResolvedValueOnce(
@@ -339,6 +308,7 @@ describe("song preview API", () => {
   });
 
   it("returns not_found when Deezer has no matching preview result", async () => {
+    await forceSearchPreviewLookup("on-your-mark");
     const fetchMock = vi.fn(async () => Response.json({ data: [], total: 0 }));
     vi.stubGlobal("fetch", fetchMock);
 
@@ -354,7 +324,123 @@ describe("song preview API", () => {
     });
   });
 
+  it("does not play a different Deezer track from the same artist when the requested song is missing", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        Response.json({
+          data: [
+            {
+              id: 4000000001,
+              readable: true,
+              title: "Perennial",
+              link: "https://www.deezer.com/track/4000000001",
+              duration: 240,
+              rank: 100,
+              preview: "https://cdnt-preview.dzcdn.net/perennial.mp3",
+              artist: { id: 205924797, name: "スリーズブーケ", type: "artist" },
+              album: { id: 700000000, title: "Perennial", type: "album" },
+              type: "track"
+            }
+          ],
+          total: 1
+        })
+      )
+    );
+
+    const response = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({
+      songId: "holiday-holiday",
+      status: "not_found",
+      source: "deezer",
+      stale: false,
+      preview: null
+    });
+  });
+
+  it("does not treat a shorter same-artist title as the requested versioned song", async () => {
+    await prisma.song.update({
+      where: { id: "holiday-holiday" },
+      data: {
+        deezerTrackId: null,
+        deezerSearchTitle: "Holiday∞Holiday 104期Ver.",
+        titleJa: "Holiday∞Holiday (104期Ver.)"
+      }
+    });
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        Response.json({
+          data: [
+            {
+              id: 2967994891,
+              readable: true,
+              title: "Holiday∞Holiday",
+              link: "https://www.deezer.com/track/2967994891",
+              duration: 256,
+              rank: 100,
+              preview: "https://cdnt-preview.dzcdn.net/holiday.mp3",
+              artist: { id: 205924797, name: "スリーズブーケ", type: "artist" },
+              album: { id: 635338091, title: "Holiday∞Holiday", type: "album" },
+              type: "track"
+            }
+          ],
+          total: 1
+        })
+      )
+    );
+
+    const response = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({
+      songId: "holiday-holiday",
+      status: "not_found",
+      preview: null
+    });
+  });
+
+  it("ignores a fresh cached preview when it belongs to a different Deezer track", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
+    await prisma.songPreview.create({
+      data: {
+        songId: "holiday-holiday",
+        status: "found",
+        deezerTrackId: BigInt(4000000001),
+        deezerTrackTitle: "Perennial",
+        deezerArtistName: "スリーズブーケ",
+        deezerAlbumTitle: "Perennial",
+        duration: 240,
+        previewUrl: "https://cdnt-preview.dzcdn.net/perennial.mp3",
+        trackLink: "https://www.deezer.com/track/4000000001",
+        rank: 100
+      }
+    });
+    const fetchMock = vi.fn(async () => Response.json({ data: [], total: 0 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const response = await app.request("/api/songs/holiday-holiday/preview", { headers: serviceAuthHeaders });
+
+    expect(response.status).toBe(200);
+    await expect(response.json()).resolves.toMatchObject({
+      songId: "holiday-holiday",
+      status: "not_found",
+      source: "deezer",
+      stale: false,
+      preview: null
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    await expect(prisma.songPreview.findUnique({ where: { songId: "holiday-holiday" } })).resolves.toMatchObject({
+      status: "not_found",
+      previewUrl: null
+    });
+  });
+
   it("returns unavailable with stale preview when Deezer fails after cache expiry", async () => {
+    await forceSearchPreviewLookup("holiday-holiday");
     const fetchMock = stubDeezerSearchResponse({
       id: 2967994891,
       title: "Holiday∞Holiday",

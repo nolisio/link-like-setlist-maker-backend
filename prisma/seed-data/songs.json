@@ -13,7 +13,7 @@
     "id": "on-your-mark",
     "title": "On your mark",
     "titleJa": "On your mark",
-    "unitId": "dollchestra",
+    "unitId": "hasunosora",
     "sortOrder": 2,
     "releaseDate": "2023-03-29",
     "deezerSearchTitle": "On your mark",
@@ -504,26 +504,6 @@
     "deezerTrackId": 2699785402
   },
   {
-    "id": "dream-believers-104",
-    "title": "Dream Believers (104th Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 56,
-    "releaseDate": "2024-04-17",
-    "deezerSearchTitle": "Dream Believers 104th Ver.",
-    "titleJa": "Dream Believers (104th Ver.)",
-    "deezerTrackId": 2731914121
-  },
-  {
-    "id": "on-your-mark-104",
-    "title": "On your mark (104th Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 57,
-    "releaseDate": "2024-04-17",
-    "deezerSearchTitle": "On your mark 104th Ver.",
-    "titleJa": "On your mark (104th Ver.)",
-    "deezerTrackId": 2731914131
-  },
-  {
     "id": "aoku-haruka",
     "title": "Aoku Haruka",
     "titleJa": "アオクハルカ",
@@ -549,16 +529,6 @@
     "releaseDate": "2024-04-17",
     "titleJa": "みらくりえーしょん",
     "deezerTrackId": 2731914161
-  },
-  {
-    "id": "eien-no-euphoria-104",
-    "title": "永遠のEuphoria (104th Ver.)",
-    "titleJa": "永遠のEuphoria (104th Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 61,
-    "releaseDate": "2024-04-17",
-    "deezerSearchTitle": "永遠のEuphoria 104th Ver.",
-    "deezerTrackId": 2731914171
   },
   {
     "id": "bloom-the-smile-bloom-the-dream",
@@ -588,16 +558,6 @@
     "deezerTrackId": 2926662511
   },
   {
-    "id": "reflection-in-the-mirror-104",
-    "title": "Reflection in the mirror (104th NEW Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 65,
-    "releaseDate": "2024-09-04",
-    "deezerSearchTitle": "Reflection in the mirror (104期NEW Ver.)",
-    "titleJa": "Reflection in the mirror (104th NEW Ver.)",
-    "deezerTrackId": 2926662521
-  },
-  {
     "id": "proof",
     "title": "Proof",
     "unitId": "dollchestra",
@@ -605,16 +565,6 @@
     "releaseDate": "2024-09-11",
     "titleJa": "Proof",
     "deezerTrackId": 2935230771
-  },
-  {
-    "id": "sparkly-spot-104",
-    "title": "Sparkly Spot (104th NEW Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 67,
-    "releaseDate": "2024-09-11",
-    "deezerSearchTitle": "Sparkly Spot (104期NEW Ver.)",
-    "titleJa": "Sparkly Spot (104th NEW Ver.)",
-    "deezerTrackId": 2935230781
   },
   {
     "id": "bring-the-love",
@@ -635,16 +585,6 @@
     "deezerSearchTitle": "ファンファーレ！！！",
     "titleJa": "Fanfare!!!",
     "deezerTrackId": 2971541641
-  },
-  {
-    "id": "identity-104",
-    "title": "Identity (104th NEW Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 70,
-    "releaseDate": "2024-10-02",
-    "deezerSearchTitle": "アイデンティティ (104期NEW Ver.)",
-    "titleJa": "Identity (104th NEW Ver.)",
-    "deezerTrackId": 2971541651
   },
   {
     "id": "hanamusubi",
@@ -845,16 +785,6 @@
     "deezerTrackId": 3265815961
   },
   {
-    "id": "dream-believers-105",
-    "title": "Dream Believers (105th Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 93,
-    "releaseDate": "2025-04-30",
-    "deezerSearchTitle": "Dream Believers (105期Ver.)",
-    "titleJa": "Dream Believers (105th Ver.)",
-    "deezerTrackId": 3301707391
-  },
-  {
     "id": "celebration",
     "title": "Celebration!",
     "unitId": "cerise-bouquet",
@@ -900,240 +830,6 @@
     "deezerTrackId": 3301707441
   },
   {
-    "id": "deepness-rec",
-    "title": "DEEPNESS (ReC Ver.)",
-    "titleJa": "DEEPNESS (ReC Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 99,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326682971
-  },
-  {
-    "id": "natsumeki-pain-104",
-    "title": "Natsumeki Pain (104th Ver.)",
-    "titleJa": "夏めきペイン (104期Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 100,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326682981
-  },
-  {
-    "id": "trick-and-cute-104",
-    "title": "Trick & Cute (104th Ver.)",
-    "titleJa": "Trick ＆ Cute (104期Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 101,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326682991
-  },
-  {
-    "id": "tsubasa-la-liberte-104",
-    "title": "Tsubasa La Liberté (104th Ver.)",
-    "titleJa": "ツバサ・ラ・リベルテ (104期Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 102,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683001
-  },
-  {
-    "id": "link-to-the-future-104",
-    "title": "Link to the FUTURE (104th Ver.)",
-    "titleJa": "Link to the FUTURE (104期Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 103,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683011
-  },
-  {
-    "id": "suisai-sekai-104",
-    "title": "Suisai Sekai (104th Ver.)",
-    "titleJa": "水彩世界 (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 104,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683031
-  },
-  {
-    "id": "mix-shake-104",
-    "title": "Mix shake!! (104th Ver.)",
-    "titleJa": "Mix shake!! (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 105,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683041
-  },
-  {
-    "id": "holiday-holiday-104",
-    "title": "Holiday∞Holiday (104th Ver.)",
-    "titleJa": "Holiday∞Holiday (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 106,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683051
-  },
-  {
-    "id": "genyou-yakou-104",
-    "title": "Genyou Yakou (104th Ver.)",
-    "titleJa": "眩耀夜行 (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 107,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683061
-  },
-  {
-    "id": "sugao-no-pixel-104",
-    "title": "Sugao no Pixel (104th Ver.)",
-    "titleJa": "素顔のピクセル (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 108,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683071
-  },
-  {
-    "id": "senpen-banka-104",
-    "title": "Senpen Banka (104th Ver.)",
-    "titleJa": "千変万華 (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 109,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683081
-  },
-  {
-    "id": "sugar-melt-104",
-    "title": "Sugar Melt (104th Ver.)",
-    "titleJa": "シュガーメルト (104期Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 110,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683091
-  },
-  {
-    "id": "awoke-104",
-    "title": "AWOKE (104th Ver.)",
-    "titleJa": "AWOKE (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 111,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683101
-  },
-  {
-    "id": "kibouteki-prism-104",
-    "title": "Kibouteki Prism (104th Ver.)",
-    "titleJa": "希望的プリズム (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 112,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683111
-  },
-  {
-    "id": "tragic-drops-104",
-    "title": "Tragic Drops (104th Ver.)",
-    "titleJa": "Tragic Drops (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 113,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683121
-  },
-  {
-    "id": "mirage-voyage-104",
-    "title": "Mirage Voyage (104th Ver.)",
-    "titleJa": "Mirage Voyage (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 114,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683131
-  },
-  {
-    "id": "take-it-over-104",
-    "title": "Take It Over (104th Ver.)",
-    "titleJa": "Take It Over (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 115,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683141
-  },
-  {
-    "id": "knot-104",
-    "title": "KNOT (104th Ver.)",
-    "titleJa": "KNOT (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 116,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683151
-  },
-  {
-    "id": "seishun-no-rinkaku-104",
-    "title": "Seishun no Rinkaku (104th Ver.)",
-    "titleJa": "青春の輪郭 (104期Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 117,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683161
-  },
-  {
-    "id": "do-do-do-104",
-    "title": "Do! Do! Do! (104th Ver.)",
-    "titleJa": "ド！ド！ド！ (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 118,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683171
-  },
-  {
-    "id": "hakuchuu-a-la-mode-104",
-    "title": "Hakuchuu à la Mode (104th Ver.)",
-    "titleJa": "ハクチューアラモード (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 119,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683181
-  },
-  {
-    "id": "kokon-tozai-104",
-    "title": "Kokon Tozai (104th Ver.)",
-    "titleJa": "ココン東西 (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 120,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683191
-  },
-  {
-    "id": "nonfiction-hero-show-104",
-    "title": "Nonfiction Hero Show (104th Ver.)",
-    "titleJa": "ノンフィクションヒーローショー (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 121,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683201
-  },
-  {
-    "id": "ishin-denshin-104",
-    "title": "Ishin☆Denshin (104th Ver.)",
-    "titleJa": "以心☆電信 (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 122,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683211
-  },
-  {
-    "id": "mahara-jamboree-104",
-    "title": "Mahara Jamboree (104th Ver.)",
-    "titleJa": "マハラジャンボリー (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 123,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683221
-  },
-  {
-    "id": "tensai-nano-kamo-shirenai-104",
-    "title": "Tensai Nano Kamo Shirenai (104th Ver.)",
-    "titleJa": "天才なのかもしれない (104期Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 124,
-    "releaseDate": "2025-05-20",
-    "deezerTrackId": 3326683231
-  },
-  {
     "id": "retrofuture",
     "title": "Retrofuture",
     "unitId": "edel-note",
@@ -1159,16 +855,6 @@
     "releaseDate": "2025-05-21",
     "titleJa": "チリコンカン",
     "deezerTrackId": 3326846811
-  },
-  {
-    "id": "dream-believers-sakura",
-    "title": "Dream Believers (SAKURA Ver.)",
-    "unitId": "hasunosora",
-    "sortOrder": 128,
-    "releaseDate": "2025-06-04",
-    "deezerSearchTitle": "Dream Believers SAKURA Ver.",
-    "titleJa": "Dream Believers (SAKURA Ver.)",
-    "deezerTrackId": 3326683021
   },
   {
     "id": "be-proud",
@@ -1213,7 +899,7 @@
   {
     "id": "tohyo-star",
     "title": "Tohyo☆Star!",
-    "titleJa": "投票☆スター！",
+    "titleJa": "とーひょー☆スター！",
     "unitId": "hasunosora",
     "sortOrder": 133,
     "releaseDate": "2025-07-09",
@@ -1412,7 +1098,7 @@
   {
     "id": "new-black",
     "title": "Nεw Black",
-    "unitId": "prince-epsilon",
+    "unitId": "PRINCESS",
     "sortOrder": 155,
     "releaseDate": "2025-12-03",
     "titleJa": "Nεw Black",
@@ -1421,7 +1107,7 @@
   {
     "id": "ichigo-milk-love",
     "title": "IcHiGo milK love",
-    "unitId": "prince-epsilon",
+    "unitId": "PRINCESS",
     "sortOrder": 156,
     "releaseDate": "2025-12-03",
     "titleJa": "IcHiGo milK love",
@@ -1572,15 +1258,6 @@
     "deezerTrackId": 3889093561
   },
   {
-    "id": "fushigi-to-kimi-to-library-bgp",
-    "title": "Fushigi to Kimi to Library (B.G.P. Ver.)",
-    "titleJa": "不思議と君とライブラリー (B.G.P. Ver.)",
-    "unitId": "cerise-bouquet",
-    "sortOrder": 173,
-    "releaseDate": "2026-04-08",
-    "deezerTrackId": 3889093571
-  },
-  {
     "id": "kanazawa-katarenbo",
     "title": "Kanazawa Katarenbo",
     "titleJa": "金沢片恋慕",
@@ -1599,15 +1276,6 @@
     "deezerTrackId": 3889102451
   },
   {
-    "id": "icy-bgp",
-    "title": "Icy (B.G.P. Ver.)",
-    "titleJa": "アイシイ (B.G.P. Ver.)",
-    "unitId": "dollchestra",
-    "sortOrder": 176,
-    "releaseDate": "2026-04-08",
-    "deezerTrackId": 3889102461
-  },
-  {
     "id": "umbrella",
     "title": "Umbrella",
     "unitId": "dollchestra",
@@ -1624,15 +1292,6 @@
     "sortOrder": 178,
     "releaseDate": "2026-04-08",
     "deezerTrackId": 3889102811
-  },
-  {
-    "id": "tomodachi-ni-nareru-basho-bgp",
-    "title": "Tomodachi ni Nareru Basho (B.G.P. Ver.)",
-    "titleJa": "トモダチになれる場所 (B.G.P. Ver.)",
-    "unitId": "mira-cra-park",
-    "sortOrder": 179,
-    "releaseDate": "2026-04-08",
-    "deezerTrackId": 3889102821
   },
   {
     "id": "senpai",
@@ -1716,13 +1375,39 @@
     "deezerTrackId": 3993729691
   },
   {
-    "id": "dream-believers-bgp",
-    "title": "Dream Believers (B.G.P. Ver.)",
-    "unitId": "hasunosora",
+    "id": "perenial",
+    "title": "Perenial",
+    "titleJa": "ペレニアル",
+    "unitId": "hasu-no-sanrenka",
     "sortOrder": 189,
     "releaseDate": "2026-06-03",
-    "deezerSearchTitle": "Dream Believers B.G.P. Ver.",
-    "titleJa": "Dream Believers (B.G.P. Ver.)",
-    "deezerTrackId": 3993729701
+    "deezerTrackId": null
+  },
+  {
+    "id": "playlist-anohi",
+    "title": "Playlist Ano Hi",
+    "titleJa": "プレイリスト/「あの日」",
+    "unitId": "solo",
+    "sortOrder": 190,
+    "releaseDate": "2026-06-03",
+    "deezerTrackId": null
+  },
+  {
+    "id": "bless-you",
+    "title": "Bless you!",
+    "titleJa": "Bless you!",
+    "unitId": "solo",
+    "sortOrder": 191,
+    "releaseDate": "2026-06-03",
+    "deezerTrackId": null
+  },
+  {
+    "id": "mijinko-transformation",
+    "title": "Mijinko Transformation",
+    "titleJa": "ミジンコトランスフォーメーション",
+    "unitId": "solo",
+    "sortOrder": 192,
+    "releaseDate": "2026-06-03",
+    "deezerTrackId": null
   }
 ]
