@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const transactionMock = vi.fn();
@@ -26,6 +28,19 @@ beforeEach(() => {
 });
 
 describe("seedCatalog", () => {
+  it("only references seeded unit ids from songs", async () => {
+    const [units, songs] = await Promise.all([
+      readSeedJson<Array<{ id: string }>>("units.json"),
+      readSeedJson<Array<{ id: string; unitId: string }>>("songs.json")
+    ]);
+    const unitIds = new Set(units.map((unit) => unit.id));
+    const missingUnitIds = Array.from(
+      new Set(songs.filter((song) => !unitIds.has(song.unitId)).map((song) => song.unitId))
+    );
+
+    expect(missingUnitIds).toEqual([]);
+  });
+
   it("uses an extended interactive transaction timeout for the shared Supabase seed run", async () => {
     const { seedCatalog } = await import("../../prisma/seed.js");
 
@@ -38,5 +53,16 @@ describe("seedCatalog", () => {
     });
     expect(unitUpsertMock).toHaveBeenCalled();
     expect(songUpsertMock).toHaveBeenCalled();
+    expect(songUpsertMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        where: { id: "perenial" },
+        update: expect.objectContaining({ deezerTrackId: null }),
+        create: expect.objectContaining({ deezerTrackId: null })
+      })
+    );
   });
 });
+
+async function readSeedJson<T>(fileName: string) {
+  return JSON.parse(await readFile(join(process.cwd(), "prisma", "seed-data", fileName), "utf8")) as T;
+}

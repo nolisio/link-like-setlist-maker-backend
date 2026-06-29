@@ -26,7 +26,7 @@
   },
   {
     "id": "rurino-to-yukai-na-tsuzuri-tachi",
-    "name": "瑠璃乃と愉快なつづりたち",
+    "name": "るりのとゆかいなつづりたち",
     "sortOrder": 6
   },
   {
@@ -36,7 +36,7 @@
   },
   {
     "id": "hasu-no-kyuujitsu",
-    "name": "はすの休日",
+    "name": "蓮ノ休日",
     "sortOrder": 8
   },
   {
@@ -45,8 +45,8 @@
     "sortOrder": 9
   },
   {
-    "id": "prince-epsilon",
-    "name": "PRINCE epsilon",
+    "id": "PRINCESS",
+    "name": "PRINCEε>ε>",
     "sortOrder": 10
   },
   {
@@ -58,5 +58,20 @@
     "id": "collaboration",
     "name": "コラボレーション",
     "sortOrder": 12
+  },
+  {
+    "id": "hasu-no-daisankaku",
+    "name": "蓮ノ大三角 ",
+    "sortOrder": 13
+  },
+  {
+    "id": "hasu-no-shousankaku",
+    "name": "蓮ノ小三角",
+    "sortOrder": 14
+  },
+  {
+    "id": "hasu-no-sanrenka",
+    "name": "蓮ノ三連花",
+    "sortOrder": 15
   }
 ]

@@ -20,7 +20,7 @@ type SongSeed = {
   deezerSearchTitle?: string;
   deezerArtistName?: string;
   deezerArtistId?: number;
-  deezerTrackId?: number;
+  deezerTrackId?: number | null;
 };
 
 async function readSeedJson<T>(fileName: string): Promise<T> {
@@ -56,7 +56,7 @@ export async function seedCatalog() {
           deezerSearchTitle: song.deezerSearchTitle ?? null,
           deezerArtistName: song.deezerArtistName ?? deezerArtist?.name ?? null,
           deezerArtistId: song.deezerArtistId ?? deezerArtist?.id ?? null,
-          deezerTrackId: song.deezerTrackId === undefined ? null : BigInt(song.deezerTrackId)
+          deezerTrackId: song.deezerTrackId == null ? null : BigInt(song.deezerTrackId)
         };
 
         await tx.song.upsert({
